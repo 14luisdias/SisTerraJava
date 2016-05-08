@@ -5,6 +5,7 @@
  */
 package Servlets;
 
+import controle.MotoristaImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Motorista;
 
 /**
  *
@@ -73,6 +75,16 @@ public class CadastrarMotorista extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
               //jkdcjsdbjsdbj
+        Motorista motorista = new Motorista();//cria o objeto Motorista
+        
+        //preenche o objeto contato
+        motorista.setNome(request.getParameter("nome"));
+        MotoristaImpl motoristaDao = new MotoristaImpl();//cria o objeto contatoDao
+        
+        //salva
+        motoristaDao.salvar(motorista);
+        //retorna pra a tela de cadastro
+        response.sendRedirect("cadastrarMotorista.jsp");
               
     }
 

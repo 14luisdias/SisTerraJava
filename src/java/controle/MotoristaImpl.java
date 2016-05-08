@@ -24,7 +24,7 @@ public class MotoristaImpl implements MotoristaDao {
 	public void salvar(Motorista motorista) {
 		try {
 			String sql = "insert into motorista "
-                                + "(nome) values(?)";
+                                + "(nommot) values(?)";
 			
 			stmt = conn.prepareStatement(sql);
 			
