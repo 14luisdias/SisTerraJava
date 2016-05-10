@@ -12,12 +12,13 @@
         <title>Cadastrar Motorista</title>
     </head>
     <body>
-        Cadastrar Motorista <b>|</b> <a href="http://localhost:8080/sistTerra/index.html">Menu Principal</a>
+        <h1>Cadastrar Motorista</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.html">Menu Principal</a>
                             <b>|</b> <a href="http://localhost:8080/sistTerra/motorista.jsp">Motorista</a>
         <form action="cadastrarMotorista" method="post">
             <table>
+                <tr> <td colspan="2" height="50"></td></tr>
                 <tr>
-                    <td size="40%">Nome
+                    <td size="40%">Nome</td>
                     <td><input type="text" name="nome" value="" size="70" /></td>
                 </tr>
                 <tr><td colspan="2" align="right">

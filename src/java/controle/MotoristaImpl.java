@@ -72,7 +72,7 @@ public class MotoristaImpl implements MotoristaDao {
 	public List<Motorista> getListAll() {
 		List<Motorista> list = new ArrayList<Motorista>();
 		try {
-			String sql = "select id, nome from motorista";
+			String sql = "select codmot, nommot from motorista";
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while(rs.next()){

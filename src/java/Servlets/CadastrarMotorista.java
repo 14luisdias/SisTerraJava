@@ -8,6 +8,7 @@ package Servlets;
 import controle.MotoristaImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +18,7 @@ import modelo.Motorista;
 
 /**
  *
- * @author Qualidade
+ * @author 14luisdias
  */
 @WebServlet(name = "CadastrarMotorista", urlPatterns = {"/cadastrarMotorista"})
 public class CadastrarMotorista extends HttpServlet {
@@ -74,16 +75,21 @@ public class CadastrarMotorista extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-              //jkdcjsdbjsdbj
-        Motorista motorista = new Motorista();//cria o objeto Motorista
         
-        //preenche o objeto contato
-        motorista.setNome(request.getParameter("nome"));
-        MotoristaImpl motoristaDao = new MotoristaImpl();//cria o objeto contatoDao
+        if(!"".equals(request.getParameter("nome"))){
         
-        //salva
-        motoristaDao.salvar(motorista);
-        //retorna pra a tela de cadastro
+            Motorista motorista = new Motorista();//cria o objeto Motorista
+            motorista.setNome(request.getParameter("nome"));//preenche o objeto contato
+            MotoristaImpl motoristaDao = new MotoristaImpl();//cria o objeto contatoDao
+        
+             //salva
+            motoristaDao.salvar(motorista);
+            //retorna pra a tela de cadastro
+        }else{
+           
+           // out.println("Digite um Nome Valido");
+        }
+        
         response.sendRedirect("cadastrarMotorista.jsp");
               
     }

@@ -1,7 +1,7 @@
 <%-- 
     Document   : cadastrarMotorista
     Created on : 29/04/2016, 16:21:34
-    Author     : LuisDias
+    Author     : 14luisdias
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -29,6 +29,7 @@
                    <td width=8%>Nome</td> <td><input type="text" name="nome" value="" size="70" /> <br></td>
                 </tr>
                 <tr> <td colspan="2" align="right">
+                        <a href="http://localhost:8080/sistTerra/listarMotorista.jsp">  Listar Todos<a/>
                         <input type="submit" value="Consultar" /> 
                         <input type="reset" value="Limpar" />
                         <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">  Novo<a/>
