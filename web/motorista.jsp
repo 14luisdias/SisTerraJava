@@ -16,7 +16,7 @@
           <table >
               <tr align="buttom">
                 <td><h1 size="50">Motoristas</h1></td>
-                <td><b>|</b><a href="http://localhost:8080/sistTerra/index.html">  Menu Principal<a/></td>
+                <td><b>|</b><a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">  Menu Principal<a/></td>
               </tr>
           </table>
       </div>
@@ -29,10 +29,10 @@
                    <td width=8%>Nome</td> <td><input type="text" name="nome" value="" size="70" /> <br></td>
                 </tr>
                 <tr> <td colspan="2" align="right">
-                        <a href="http://localhost:8080/sistTerra/listarMotorista.jsp">  Listar Todos<a/>
+                        <a href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">  Listar Todos<a/>
                         <input type="submit" value="Consultar" /> 
                         <input type="reset" value="Limpar" />
-                        <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">  Novo<a/>
+                        <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp" style="text-decoration:none">  Novo<a/>
                         
                         
                 </td></tr>

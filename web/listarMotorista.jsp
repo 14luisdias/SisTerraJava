@@ -18,8 +18,8 @@
         <table>
             <tr><td><h1>Motoristas</h1></td>
             <td>    
-                <b>|</b> <a href="http://localhost:8080/sistTerra/index.html">Menu Principal</a>
-                <b>|</b> <a href="http://localhost:8080/sistTerra/motorista.jsp">Motorista</a>
+                <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+                <b>|</b> <a href="http://localhost:8080/sistTerra/motorista.jsp" style="text-decoration:none">Motorista</a>
             </td>
             </tr>
         </table>
@@ -27,8 +27,8 @@
             <table>
                 <tr> <td colspan="2" height="20"></td></tr>
                 <tr>
-                    <td width="100"><b>Código</b></td>
-                    <td><b>Nome</b></td>
+                    <td width="0"><b>Código | Nome</b></td>
+                    
                 </tr>
                 <%
                     MotoristaImpl motoristaImpl = new MotoristaImpl();
@@ -36,8 +36,8 @@
                     for(Motorista m : list){
                 %>
                         <tr>
-                            <td><%= m.getId() %></td>
-                            <td><%= m.getNome()%></td>
+                            <td colspan="2"><a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none"><%= m.getId()+" - "+m.getNome()%><a/></td>
+                                                                                           
                         </tr>
                 <%
                     }
