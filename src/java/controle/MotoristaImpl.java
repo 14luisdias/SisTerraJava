@@ -90,7 +90,7 @@ public class MotoristaImpl implements MotoristaDao {
 
 	@Override
 	public Motorista findById(int id) {
-		String sql = "select id, nome from motorista where id = ?";
+		String sql = "select codmot, nommot from motorista where codmot = ?";
                 Motorista motorista = new Motorista();
                 try{
                     stmt = conn.prepareStatement(sql);

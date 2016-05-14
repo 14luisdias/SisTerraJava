@@ -20,7 +20,7 @@
                 <tr> <td colspan="2" height="50"></td></tr>
                 <tr>
                     <td size="40%">Nome</td>
-                    <td><input type="text" name="nome" value="" size="70" /></td>
+                    <td><input type="text" name="nome" value="" size="70" required/></td>
                 </tr>
                 <tr><td colspan="2" align="right">
                         <input type="submit" value="Salvar" />

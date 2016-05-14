@@ -36,7 +36,7 @@
                     for(Motorista m : list){
                 %>
                         <tr>
-                            <td colspan="2"><a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none"><%= m.getId()+" - "+m.getNome()%><a/></td>
+                            <td colspan="2"><a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=<%= m.getId() %>" style="text-decoration:none"> <%= m.getId()+" - "+m.getNome()%></a></td>
                                                                                            
                         </tr>
                 <%
