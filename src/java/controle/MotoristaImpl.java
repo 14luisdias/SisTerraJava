@@ -39,8 +39,8 @@ public class MotoristaImpl implements MotoristaDao {
 	@Override
 	public void atualizar(Motorista  motorista) {
 		// TODO Auto-generated method stub
-            String sql = "update contato set nome = ? "
-                    + "where id = ?";
+            String sql = "update motorista set nommot = ? "
+                    + "where codmot = ?";
             try {
                 stmt = conn.prepareStatement(sql);
                 
