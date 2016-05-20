@@ -25,7 +25,7 @@
         </table>
         <div>
             <table>
-                <tr> <td colspan="2" height="20"></td></tr>
+                <tr> <td colspan="3" height="20"></td></tr>
                 <tr>
                     <td width="0"><b>Código | Nome</b></td>
                     
@@ -36,8 +36,8 @@
                     for(Motorista m : list){
                 %>
                         <tr>
-                            <td colspan="2"><a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=<%= m.getId() %>" style="text-decoration:none"> <%= m.getId()+" - "+m.getNome()%></a></td>
-                                                                                           
+                            <td colspan="2" width="90%"><a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=<%= m.getId() %>" style="text-decoration:none"> <%= m.getId()+" - "+m.getNome()%></a></td>
+                            <td><a href="http://localhost:8080/sistTerra/excluirMotorista?id=<%= m.getId() %>" style="text-decoration:none">Excluir</a></td>                                                              
                         </tr>
                 <%
                     }

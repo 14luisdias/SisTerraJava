@@ -26,12 +26,13 @@
                 <tr> <td colspan="2" height="50"></td></tr>
                 <tr>
                      <td>Código: </td>
-                     <td><%= m.getId()%></td>
+                     <td><input type="text" name="cod" value="<%= m.getId()%>" disabled="disabled"/></td>
+                        
                 </tr>
                 <tr>
                     <td size="40%">Nome</td>
                     <td><input type="text" name="nome" value="<%= m.getNome()%>" size="70" required/></td>
-                    <td><input type="hidden" name="id" value="<%= m.getId()%>" size="70" required/></td>
+                    <td><input type="hidden" name="id" value="<%= m.getId()%>"/></td>
                 </tr>
                 <tr><td colspan="2" align="right">
                         <input type="submit" value="Atualizar" />

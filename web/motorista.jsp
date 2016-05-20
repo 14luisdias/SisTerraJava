@@ -4,7 +4,7 @@
     Author     : 14luisdias
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,17 +20,28 @@
               </tr>
           </table>
       </div>
-       <form action="cadatrarMotorista" method="post">
             <table style="width:100%" border="0">
                 <tr>
-                   <td width=8%> CÃ³digo</td> <td><input type="text" name="codigo" value="" /><br></td>
+                   <td width=2%>  <input type="radio" name="pesquisa" value="cod" onclick="nome.disabled=true, codigo.disabled=false" checked="checked" /></td>
+                   <td width=5%> Código</td> 
+                   <td><input type="text" name="codigo" value="" requerid/></td>
+                
                 </tr>
                 <tr>
-                   <td width=8%>Nome</td> <td><input type="text" name="nome" value="" size="70" /> <br></td>
+                    <td><input type="radio" name="pesquisa" value="nom" onclick="nome.disabled=false, codigo.disabled=true"/></td>
+                    <td width=5%>Nome</td>
+                    <td><input type="text" name="nome" value="" size="70" disabled="disabled" required/> </td>
                 </tr>
-                <tr> <td colspan="2" align="right">
+               
+                
+                <tr> <td colspan="3" align="right">
+                                       
                         <a href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">  Listar Todos<a/>
-                        <input type="submit" value="Consultar" /> 
+                                           
+                        <a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=" > Consultar </a>
+                                                             
+                        
+                      
                         <input type="reset" value="Limpar" />
                         <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp" style="text-decoration:none">  Novo<a/>
                         
@@ -38,7 +49,6 @@
                 </td></tr>
                 
              <table>
-         </form>
        </div>
      
     </body>

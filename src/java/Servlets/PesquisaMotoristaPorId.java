@@ -62,6 +62,7 @@ public class PesquisaMotoristaPorId extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        processRequest(request, response);
+       
         int idMotorista = Integer.valueOf(request.getParameter("id"));
         MotoristaImpl motoristaDao = new MotoristaImpl();
         //pesquisei pelo motorista

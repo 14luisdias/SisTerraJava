@@ -15,7 +15,9 @@ import java.util.logging.Logger;
 import modelo.Motorista;
 
 public class MotoristaImpl implements MotoristaDao {
-	
+
+        
+    
 	Connection conn = ConnectionFactory.getConnection();
 	PreparedStatement stmt;
 	ResultSet rs;
@@ -57,7 +59,7 @@ public class MotoristaImpl implements MotoristaDao {
 	@Override
 	public void remover(Motorista motorista) {
 		// TODO Auto-generated method stub
-            String sql = "delete from motorista where id = ?";
+            String sql = "delete from motorista where codmot = ?";
             try {
                 stmt = conn.prepareStatement(sql);
                 stmt.setInt(1, motorista.getId());
