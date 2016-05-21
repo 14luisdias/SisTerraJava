@@ -12,6 +12,7 @@
         <title>Motorista</title>
     </head>
     <body>
+     <form action="pesquisaMotorista" method="post">
       <div>
           <table>
               <tr align="buttom">
@@ -38,7 +39,7 @@
                                        
                         <a href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">  Listar Todos<a/>
                                            
-                        <a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=" > Consultar </a>
+                            <input type="submit" value="Consultar" />
                                                              
                         
                       
@@ -50,6 +51,6 @@
                 
              <table>
        </div>
-     
+    </form> 
     </body>
 </html>
