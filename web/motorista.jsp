@@ -1,56 +1,69 @@
-<%-- 
-    Document   : cadastrarMotorista
-    Created on : 29/04/2016, 16:21:34
-    Author     : 14luisdias
---%>
-
-
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Motorista</title>
+        <title>SisTerra</title>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 0px)" href="css/small.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px)" href="css/medium.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 1350px)" href="css/large.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-     <form action="pesquisaMotorista" method="post">
-      <div>
-          <table>
-              <tr align="buttom">
-                <td><h1 size="50">Motoristas</h1></td>
-                <td><b>|</b><a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">  Menu Principal<a/></td>
-              </tr>
-          </table>
-      </div>
-            <table style="width:100%" border="0">
-                <tr>
-                   <td width=2%>  <input type="radio" name="pesquisa" value="cod" onclick="nome.disabled=true, codigo.disabled=false" checked="checked" /></td>
-                   <td width=5%> Código</td> 
-                   <td><input type="text" name="codigo" value="" requerid/></td>
-                
-                </tr>
-                <tr>
-                    <td><input type="radio" name="pesquisa" value="nom" onclick="nome.disabled=false, codigo.disabled=true"/></td>
-                    <td width=5%>Nome</td>
-                    <td><input type="text" name="nome" value="" size="70" disabled="disabled" required/> </td>
-                </tr>
-               
-                
-                <tr> <td colspan="3" align="right">
-                                       
-                        <a href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">  Listar Todos<a/>
-                                           
-                            <input type="submit" value="Consultar" />
-                                                             
+        <div id="corpo-todo">
+            
+        <div id="cabecalho">
+            <h1><a href="http://localhost:8080/sistTerra/index.html">SisTerra</a></h1>
+        </div>
+        <div id="menu">
+            <ul class="menu-principal">
+                <li><a target="direita" href="http://localhost:8080/sistTerra/motorista.jsp" class="url">Motorista</a></li>
+                <li><a href="#" class="url">Fornecedor</a></li>
+                <li><a href="#" class="url">Material</a></li>
+                <li><a href="#" class="url">Tipo de Veículo</a></li>
+                <li><a href="#" class="url">Veículo</a></li>
+                <li><a href="#" class="url">Locais</a></li>
+                <li><a href="#" class="url">Rotas</a></li>
+                <li><a href="#" class="url">Viagens</a></li>
+             </ul>
+        </div>
+            <div id="conteudo">
+            
+            <form id="formulario" autocomplete="off">    
+                <fieldset>
+                    <legend>Motorista</legend>
+
+                    <hr /><br />
+                    <label>Código</label>
+                    <input size="2" maxlength="3" type="text" name="codigo" requerid/><br />
+                    <label class="campo_nome">Nome</label>
+                    <input minlength="5" type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>
+                    <!-- Limpar Dados -->
+                    <input type="reset" value="Restaurar" /><br /><br />
+                </fieldset>    
+            </form>         
+                       <!-- Novo Motorista -->      
+                        <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">
+                            <img src="img/Png/Office Icons/add2-32.png" title="Novo" /></a>        
+                       <!-- Listar Todos os Cadastros --> 
+                        <a href="http://localhost:8080/sistTerra/listarMotorista.jsp">
+                            <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
+                        <!-- Pesquisar Cadastros -->                    
+                        <a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
+                            <img src="img/Png/Retail/brighty_retail_16.png" height="32px" title="Pesquisar" /></a>
                         
-                      
-                        <input type="reset" value="Limpar" />
-                        <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp" style="text-decoration:none">  Novo<a/>
-                        
-                        
-                </td></tr>
-                
-             <table>
-       </div>
-    </form> 
+            </div>
+            
     </body>
+        </div>
+                <div id="rodape">
+                    <p>Todos os direitos reservados</p></br>
+                    <p>Desenvolvido por: GilmarMH e Luiz BD</p>
+
+                </div>
 </html>
