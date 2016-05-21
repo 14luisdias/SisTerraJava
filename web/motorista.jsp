@@ -13,7 +13,7 @@
     </head>
     <body>
       <div>
-          <table >
+          <table>
               <tr align="buttom">
                 <td><h1 size="50">Motoristas</h1></td>
                 <td><b>|</b><a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">  Menu Principal<a/></td>

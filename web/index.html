@@ -11,18 +11,93 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div><h1>Menu Principal</h1></div>
-        <div>
+        <div id="corpo-todo">
+            
+        <script type="text/javascript">
+       function mediv(conteudo) {
+            var div = document.getElementById(conteudo)
+            if(div.style.display == 'none') {
+                div.style.display = 'block';
+            }
+            else {
+                div.style.display = 'none';
+            }
+        }
+        </script>
+            
+        <style>
+            *{border:0;margin:0;padding:0;}
+            body{font-family: Gill Sans MT;}
+            #corpo-todo{height:580px;width:1000px;margin:0 auto;}
+            #menu{height:370px;width:150px;float:left;border-right:1px solid #222;}
+            #cabecalho{padding-top:20px;margin:20px;height:80px;width:1200px;}
+            #conteudo{margin-left:5px;padding:10px;height:320px;width:600px;float:left;background: top}
+            #rodape{height:80px;background-color:#222;width:100%;float:both;}
+            #rodape p{text-align: center;color:#fff;}
+            
+            ul li{overflow:hidden;}
+            ul li a{text-decoration:none;font-size:16px;font-family: Gill Sans MT;}
+            ul li a:hover{color:#02f;}
+            .url{color:#000;} 
+            hr{border:1px solid #888; width:550px;}
+        </style>
+        <div id="cabecalho">
+            <h1>SisTerra</h1>
+        </div>
+        <div id="menu">
             <ul>
-                <li><a href="motorista.jsp">Motorista</a>
-                <li><a href="fornecedor.jsp">Fornecedor</a>  
-                <li><a href="material.jsp">Material</a>
-                <li><a href="tipoDeVeiculo.jsp">Tipo de Veículo</a>
-                <li><a href="veiculo.jsp">Veículo</a>
-                <li><a href="obra.jsp">Locais</a>
-                <li><a href="rota.jsp">Rotas</a>
-                <li><a href="viagem.jsp">Viagens</a>
+                <li><a href="#" class="url" onclick="mediv('conteudo')">Motorista</a></li>
+                <li><a href="#" class="url" onmouseover="mediv('div')">Fornecedor</a></li>
+                <li><a href="#" class="url">Material</a></li>
+                <li><a href="#" class="url">Tipo de Veículo</a></li>
+                <li><a href="#" class="url">Veículo</a></li>
+                <li><a href="#" class="url">Locais</a></li>
+                <li><a href="#" class="url">Rotas</a></li>
+                <li><a href="#" class="url">Viagens</a></li>
              </ul>
         </div>
+            <div id="conteudo">
+          <table >
+              <tr align="buttom">
+                <td><h1>Motorista</h1></td>
+              </tr>
+          </table>
+                
+              <hr /><br />
+            <table border="0">
+                <tr>
+                   <td>  <input type="radio" name="pesquisa" value="cod" onclick="nome.disabled=true, codigo.disabled=false" checked="checked" /></td>
+                   <td> Código</td> 
+                   <td><input type="text" name="codigo" value="" requerid/></td>
+                
+                </tr>
+                <tr>
+                    <td><input type="radio" name="pesquisa" value="nom" onclick="nome.disabled=false, codigo.disabled=true"/></td>
+                    <td>Nome</td>
+                    <td><input type="text" name="nome" value="" size="65" disabled="disabled" required/> </td>
+                </tr>
+               
+                
+                <tr> <td colspan="3" align="right">
+                                       
+                        <a href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">  Listar Todos<a/>
+                                           
+                        <a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=" > Consultar </a>
+                                                             
+                        
+                      
+                        <input type="reset" value="Limpar" />
+                        <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp" style="text-decoration:none">  Novo<a/>
+                        
+                        
+                </td></tr>
+                
+             </table>            
+            </div>
     </body>
+        </div>
+                <div id="rodape">
+                    <p>Todos os direitos reservados</p>
+
+                </div>
 </html>
