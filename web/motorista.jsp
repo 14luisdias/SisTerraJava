@@ -23,13 +23,13 @@ and open the template in the editor.
         <div id="menu">
             <ul class="menu-principal">
                 <li><a target="direita" href="http://localhost:8080/sistTerra/motorista.jsp" class="url">Motorista</a></li>
-                <li><a href="#" class="url">Fornecedor</a></li>
-                <li><a href="#" class="url">Material</a></li>
-                <li><a href="#" class="url">Tipo de Veículo</a></li>
-                <li><a href="#" class="url">Veículo</a></li>
-                <li><a href="#" class="url">Locais</a></li>
-                <li><a href="#" class="url">Rotas</a></li>
-                <li><a href="#" class="url">Viagens</a></li>
+                <li><a href="http://localhost:8080/sistTerra/fornecedor.jsp" class="url">Fornecedor</a></li>
+                <li><a href="http://localhost:8080/sistTerra/material.jsp" class="url">Material</a></li>
+                <li><a href="http://localhost:8080/sistTerra/tipoVeiculo.jsp" class="url">Tipo de Veículo</a></li>
+                <li><a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url">Veículo</a></li>
+                <li><a href="http://localhost:8080/sistTerra/locais.jsp" class="url">Locais</a></li>
+                <li><a href="http://localhost:8080/sistTerra/rotas.jsp" class="url">Rotas</a></li>
+                <li><a href="http://localhost:8080/sistTerra/viagens.jsp" class="url">Viagens</a></li>
              </ul>
         </div>
             <div id="conteudo">
@@ -42,7 +42,7 @@ and open the template in the editor.
                     <label>Código</label>
                     <input size="2" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label class="campo_nome">Nome</label>
-                    <input minlength="5" type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>
+                    <input type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>
                     <!-- Limpar Dados -->
                     <input type="reset" value="Restaurar" /><br /><br />
                 </fieldset>    
