@@ -1,0 +1,20 @@
+*{border:0;margin:0;padding:0;}
+body{font-family: Gill Sans MT;}
+#menu{height:370px;width:140px;padding-left:10px;float:left;border-right:1px solid #222;}
+.menu-principal li{display:block;}
+#cabecalho{padding-top:20px;margin:20px;height:80px;width:1200px;}
+#conteudo{margin-left:5px;padding-left:10px;height:370px;width:500px;float:left;}
+#rodape{height:50px; padding: 15px; background-color:#222;width:100%;position:fixed;bottom: 0;}
+#rodape p{text-align: center;color:#fff;}
+            
+ul li{overflow:hidden;}
+ul li a{text-decoration:none;font-size:16px;font-family: Gill Sans MT;}
+.url{color:#000;text-decoration:none;}
+.url:hover{color:#02f;}
+hr{border:1px solid #888; width:85%;}
+#formulario fieldset{height:200px;width:375px;}
+#formulario legend{font-size:22pt;font-weight: bolder;}
+#formulario label{margin-right:8px;}
+.campo_nome{padding-right:5px;}
+#formulario input{border:1px solid #888; padding:5px;border-radius: 4px;margin:2px;}
+#formulario input:hover{border:1px solid purple;}
