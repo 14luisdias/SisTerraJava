@@ -1,21 +1,25 @@
 *{border:0;margin:0;padding:0;}
 body{font-family: Gill Sans MT;}
-#menu{height:370px;width:140px;padding-left:10px;float:left;border-right:1px solid #222;}
+#menu{height:100%;background-color:#efefef;width:200px;float:left;border-right:1px solid #ccc;}
 .menu-principal li{display:block;}
-#cabecalho{padding-top:20px;margin:20px;height:80px;width:1200px;}
+#cabecalho{margin-left:35px;height:100px;line-height:100px;width:1200px;}
 #conteudo{margin-left:5px;padding-left:10px;height:370px;width:500px;float:left;}
-#rodape{height:50px; padding: 15px; background-color:#222;width:100%;position:fixed;bottom: 0;}
+#rodape{height:80px; line-height: 80px; background-color:#222;width:100%;position:fixed;bottom: 0;}
 #rodape p{text-align: center;color:#fff;}
             
-ul li{overflow:hidden;}
-ul li a{text-decoration:none;font-size:16px;font-family: Gill Sans MT;}
-.url{color:#000;text-decoration:none;}
-.url:hover{color:#02f;}
+ul li{overflow:hidden;background: #efefef;text-align: center;padding:8px;}
+ul li a{text-decoration:none;font-size:17px;font-family: Gill Sans MT;}
+ul li:hover{background:#ddd;border-right: 1px solid #ff3300;}
+.url{color:#767676;text-decoration:none;}
+.url:hover{color:#333;}
 hr{border:1px solid #888; width:85%;}
-#formulario fieldset{height:230px;width:375px;}
+
+#formulario fieldset{height:auto;margin-bottom: 10px;padding-left:15px;width:485px;border: solid 1px #ccc;}
 #formulario legend{font-size:22pt;font-weight: bolder;}
-#formulario label{margin-right:8px;}
-a img{margin:5px;}
-.campo_nome{padding-right:5px;}
+#formulario label{text-align:right;}
+
 #formulario input{border:1px solid #888; padding:5px;border-radius: 4px;margin:2px;}
 #formulario input:hover{border:1px solid purple;}
+#formulario label{display: block;text-align: left;margin:5px;}
+a img{margin:5px;}
+a img:hover{background:opacity 0.20%}

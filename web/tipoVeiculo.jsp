@@ -40,7 +40,7 @@ and open the template in the editor.
 
                     <hr /><br />
                     <label>Código Veículo</label>
-                    <input size="2" maxlength="3" type="text" name="codigo" requerid/><br />
+                    <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label>Tipo do Veículo</label>
                     <input type="text" name="tipoVeiculo" placeholder="(Trucada, Toco, Carreta, etc.)" size="25" required/>
                     <!-- Limpar Dados -->

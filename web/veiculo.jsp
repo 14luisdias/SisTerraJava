@@ -40,15 +40,15 @@ and open the template in the editor.
 
                     <hr /><br />
                     <label>Código</label>
-                    <input size="2" maxlength="3" type="text" name="codigo" requerid/><br />
+                    <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label>Placa</label>
-                    <input type="text" name="descricao" size="5" required/></br>
+                    <input type="text" name="descricao" size="25" required/></br>
                     <label>Capacidade</label>
-                    <input type="text" name="preco" size="2" required/></br>
+                    <input type="text" name="preco" size="25" required/></br>
                     <label>Cód. Tipo Veículo</label>
-                    <input type="text" name="unidade" size="2" required/></br>
+                    <input type="text" name="unidade" size="25" required/></br>
                     <label>Cód. Motorista</label>
-                    <input type="text" name="unidade" placeholder="Trucada, Toco, Carreta, etc." size="20" required/>
+                    <input type="text" name="unidade" placeholder="Trucada, Toco, Carreta, etc." size="25" required/>
                     <!-- Limpar Dados -->
                     <input type="reset" value="Restaurar" /><br /><br />
                 </fieldset>    

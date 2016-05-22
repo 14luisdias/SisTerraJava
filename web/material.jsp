@@ -40,7 +40,7 @@ and open the template in the editor.
 
                     <hr /><br />
                     <label>Código</label>
-                    <input size="2" maxlength="3" type="text" name="codigo" requerid/><br />
+                    <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label>Descrição</label>
                     <input type="text" name="descricao" placeholder="(Barro, Piçarra, Brita, Areia, etc.)" size="25" required/></br>
                     <label>Preco</label>
