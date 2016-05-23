@@ -11,5 +11,5 @@ public interface MotoristaDao {
 	public void remover(Motorista motorista);
 	public List<Motorista> getListAll();
 	public Motorista findById(int id);
-
+        public Motorista findByNome(String nome);
 }

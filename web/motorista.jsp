@@ -34,7 +34,7 @@ and open the template in the editor.
         </div>
             <div id="conteudo">
             
-            <form id="formulario" autocomplete="off">    
+                <form id="formulario" autocomplete="off" action="pesquisaMotorista" method="get">    
                 <fieldset>
                     <legend>Motorista</legend>
 
@@ -42,9 +42,10 @@ and open the template in the editor.
                     <label>Código</label>
                     <input size="2" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label class="campo_nome">Nome</label>
-                    <input minlength="5" type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>
+                    <input minlength="5" type="text" name="nome" placeholder=" Digite o nome..." size="25">
                     <!-- Limpar Dados -->
                     <input type="reset" value="Restaurar" /><br /><br />
+                    <input type="submit" value="Buscar"/>
                 </fieldset>    
             </form>         
                        <!-- Novo Motorista -->      
@@ -53,7 +54,8 @@ and open the template in the editor.
                        <!-- Listar Todos os Cadastros --> 
                         <a href="http://localhost:8080/sistTerra/listarMotorista.jsp">
                             <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
-                        <!-- Pesquisar Cadastros -->                    
+                        <!-- Pesquisar Cadastros -->          
+                        
                         <a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
                             <img src="img/Png/Retail/brighty_retail_16.png" height="32px" title="Pesquisar" /></a>
                         
@@ -63,7 +65,7 @@ and open the template in the editor.
         </div>
                 <div id="rodape">
                     <p>Todos os direitos reservados</p></br>
-                    <p>Desenvolvido por: GilmarMH e Luiz BD</p>
+                    <p>Desenvolvido por: GilmarMH e Luis SD</p>
 
                 </div>
 </html>

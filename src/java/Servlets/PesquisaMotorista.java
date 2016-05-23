@@ -5,13 +5,17 @@
  */
 package Servlets;
 
+import controle.MotoristaImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.ResultSet;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Motorista;
 
 /**
  *
@@ -31,6 +35,9 @@ public class PesquisaMotorista extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+            
+            
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -40,7 +47,7 @@ public class PesquisaMotorista extends HttpServlet {
             out.println("<title>Servlet PesquisaMotorista</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet PesquisaMotorista at " + request.getContextPath() + "</h1>");
+         // out.println("<h1>Servlet PesquisaMotorista at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -58,7 +65,30 @@ public class PesquisaMotorista extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        //processRequest(request, response);
+            if (("".equals(request.getParameter("codigo")))&&(!"".equals(request.getParameter("nome")))){   
+                   
+                    String nomeMotorista = request.getParameter("nome");
+                    MotoristaImpl motoristaDao = new MotoristaImpl();
+                    //pesquisei pelo motorista
+                    Motorista motorista = motoristaDao.findByNome(nomeMotorista);
+        
+                    request.setAttribute("motorista", motorista);
+                    RequestDispatcher dispatcher;
+                    dispatcher = request.getRequestDispatcher("PesquisaPorNome.jsp");
+                    dispatcher.forward(request, response);
+            }
+            if ((!"".equals(request.getParameter("codigo")))&&("".equals(request.getParameter("nome")))){
+                int cod = Integer.valueOf(request.getParameter("codigo"));
+                 response.sendRedirect("pesquisamotoristaporid?id="+cod);
+                                        
+            }
+                
+            if (("".equals(request.getParameter("codigo")))&&("".equals(request.getParameter("nome")))){
+               response.sendRedirect("motorista.jsp");
+              
+            }
     }
 
     /**
@@ -73,6 +103,16 @@ public class PesquisaMotorista extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+         response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            
+           
+            
+            
+        }
+        
     }
 
     /**
