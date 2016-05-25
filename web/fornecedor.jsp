@@ -18,18 +18,18 @@ and open the template in the editor.
         <div id="corpo-todo">
             
         <div id="cabecalho">
-            <h1><a class="url" href="http://localhost:8080/sistTerra/index.html">SisTerra</a></h1>
+            <h1><a href="http://localhost:8080/sistTerra/index.html"><img height="130" class="img-logo" src="img/Png/logo/logo.png" /><img height="30" class="img-name" src="img/Png/logo/logo-name2.png" /></a></h1>
         </div>
         <div id="menu">
             <ul class="menu-principal">
-                <li><a target="direita" href="http://localhost:8080/sistTerra/motorista.jsp" class="url">Motorista</a></li>
-                <li><a href="http://localhost:8080/sistTerra/fornecedor.jsp" class="url">Fornecedor</a></li>
-                <li><a href="http://localhost:8080/sistTerra/material.jsp" class="url">Material</a></li>
-                <li><a href="http://localhost:8080/sistTerra/tipoVeiculo.jsp" class="url">Tipo de Veículo</a></li>
-                <li><a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url">Veículo</a></li>
-                <li><a href="http://localhost:8080/sistTerra/locais.jsp" class="url">Locais</a></li>
-                <li><a href="http://localhost:8080/sistTerra/rotas.jsp" class="url">Rotas</a></li>
-                <li><a href="http://localhost:8080/sistTerra/viagens.jsp" class="url">Viagens</a></li>
+                <a href="http://localhost:8080/sistTerra/motorista.jsp" class="url"><li>Motorista</li></a>
+                <a href="http://localhost:8080/sistTerra/fornecedor.jsp" class="url"><li>Fornecedor</li></a>
+                <a href="http://localhost:8080/sistTerra/material.jsp" class="url"><li>Material</li></a>
+                <a href="http://localhost:8080/sistTerra/tipoVeiculo.jsp" class="url"><li>Tipo de Veículo</li></a>
+                <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Veículo</li></a>
+                <a href="http://localhost:8080/sistTerra/locais.jsp" class="url"><li>Locais</li></a>
+                <a href="http://localhost:8080/sistTerra/rotas.jsp" class="url"><li>Rotas</li></a>
+                <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
              </ul>
         </div>
             <div id="conteudo">

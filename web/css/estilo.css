@@ -2,11 +2,14 @@
 body{font-family: Gill Sans MT;}
 #menu{height:100%;background-color:#efefef;width:200px;float:left;border-right:1px solid #ccc;}
 .menu-principal li{display:block;}
-#cabecalho{margin-left:35px;height:100px;line-height:100px;width:1200px;}
-#conteudo{margin-left:5px;padding-left:10px;height:370px;width:500px;float:left;}
+#cabecalho{background: #efefef;height:160px;line-height:160px;width:1200px;}
+#conteudo{padding:10px;padding-left:20px;height:370px;width:500px;float:left;}
 #rodape{height:80px; line-height: 80px; background-color:#222;width:100%;position:fixed;bottom: 0;}
 #rodape p{text-align: center;color:#fff;}
-            
+
+.img-logo,.img-name{position:absolute;top:5px;left:40px;}
+.img-name{left:163px;top:54px;background:black;border-left:3px solid silver;border-top:3px solid silver;border-radius: 8px;}
+
 ul li{overflow:hidden;background: #efefef;text-align: center;padding:8px;}
 ul li a{text-decoration:none;font-size:17px;font-family: Gill Sans MT;}
 ul li:hover{background:#ddd;border-right: 1px solid #ff3300;}
