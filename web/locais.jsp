@@ -28,8 +28,8 @@ and open the template in the editor.
                 <a href="http://localhost:8080/sistTerra/motorista.jsp" class="url"><li>Motorista</li></a>
                 <a href="http://localhost:8080/sistTerra/fornecedor.jsp" class="url"><li>Fornecedor</li></a>
                 <a href="http://localhost:8080/sistTerra/material.jsp" class="url"><li>Material</li></a>
-                <a href="http://localhost:8080/sistTerra/tipoVeiculo.jsp" class="url"><li>Tipo de Ve√≠culo</li></a>
-                <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Ve√≠culo</li></a>
+                <a href="http://localhost:8080/sistTerra/tipoVeiculo.jsp" class="url"><li>Tipo de VeÌculo</li></a>
+                <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>VeÌculo</li></a>
                 <a href="http://localhost:8080/sistTerra/locais.jsp" class="url"><li>Locais</li></a>
                 <a href="http://localhost:8080/sistTerra/rotas.jsp" class="url"><li>Rotas</li></a>
                 <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
@@ -37,8 +37,29 @@ and open the template in the editor.
         </div>
             <div id="conteudo">
             
-                <center><h1>Ol√°, Seja Bem-Vindo!!</h1></center>
-                        
+            <form id="formulario" autocomplete="off">    
+                <fieldset>
+                    <legend>Locais</legend>
+
+                    <hr /><br />
+                    <label>CÛdigo</label>
+                    <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
+                    <label class="campo_nome">Nome</label>
+                    <input type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>             
+                    <!-- Limpar Dados -->
+                    <input type="reset" value="Restaurar" /><br /><br />
+                </fieldset>    
+            </form>         
+                       <!-- Novo Motorista -->      
+                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">
+                            <img src="img/Png/Office/add2-32.png" title="Novo" /></a>        
+                       <!-- Listar Todos os Cadastros --> 
+                        <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp">
+                            <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
+                        <!-- Pesquisar Cadastros -->                    
+                        <a class="ico" href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
+                            <img src="img/Png/Retail/brighty_retail_16.png" height="32px" title="Pesquisar" /></a>
+                    
             </div>
             
     </body>

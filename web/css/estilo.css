@@ -3,12 +3,13 @@ body{font-family: Gill Sans MT;}
 #menu{height:100%;background-color:#efefef;width:200px;float:left;border-right:1px solid #ccc;}
 .menu-principal li{display:block;}
 #cabecalho{background: #efefef;height:160px;line-height:160px;width:1200px;}
-#conteudo{padding:10px;padding-left:20px;height:370px;width:500px;float:left;}
+#conteudo{padding:10px;padding-left:20px;height:420px;width:500px;float:left;}
 #rodape{height:80px; line-height: 80px; background-color:#222;width:100%;position:fixed;bottom: 0;}
 #rodape p{text-align: center;color:#fff;}
 
 .img-logo,.img-name{position:absolute;top:5px;left:40px;}
-.img-name{left:163px;top:54px;background:black;border-left:3px solid silver;border-top:3px solid silver;border-radius: 8px;}
+.img-logo:hover{opacity: 0.7;}
+.img-name{left:40px;top:50px;padding-top:3px;padding-bottom:3px;padding-left:5px;padding-right:5px;background:transparent;border-left:3px solid white;border-top:3px solid white;border-radius: 15px;}
 
 ul li{overflow:hidden;background: #efefef;text-align: center;padding:8px;}
 ul li a{text-decoration:none;font-size:17px;font-family: Gill Sans MT;}
@@ -22,7 +23,7 @@ hr{border:1px solid #888; width:85%;}
 #formulario label{text-align:right;}
 
 #formulario input{border:1px solid #888; padding:5px;border-radius: 4px;margin:2px;}
-#formulario input:hover{border:1px solid purple;}
+#formulario input:hover{color:#fff;-moz-box-shadow: 0 0 10px #ccc; -webkit-box-shadow: 0 0 10px #ccc; box-shadow: 0 0 10px #ccc;}
 #formulario label{display: block;text-align: left;margin:5px;}
-a img{margin:5px;}
-a img:hover{background:opacity 0.20%}
+.ico{margin:5px;}
+.ico:hover{opacity: 0.4;}

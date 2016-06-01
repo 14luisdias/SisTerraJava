@@ -18,7 +18,10 @@ and open the template in the editor.
         <div id="corpo-todo">
             
         <div id="cabecalho">
-            <h1><a href="http://localhost:8080/sistTerra/index.html"><img height="130" class="img-logo" src="img/Png/logo/logo.png" /><img height="30" class="img-name" src="img/Png/logo/logo-name2.png" /></a></h1>
+            <h1><a href="http://localhost:8080/sistTerra/index.html">
+                    <img height="120" class="img-logo" src="img/Png/logo/logo.png" />
+                    <img height="25" class="img-name" src="img/Png/logo/logo-name.png" />
+                </a></h1>
         </div>
         <div id="menu">
             <ul class="menu-principal">
@@ -48,15 +51,15 @@ and open the template in the editor.
                 </fieldset>    
             </form>         
                        <!-- Novo Motorista -->      
-                        <a href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">
                             <img src="img/Png/Office/add2-32.png" title="Novo" /></a>        
                        <!-- Listar Todos os Cadastros --> 
-                        <a href="http://localhost:8080/sistTerra/listarMotorista.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp">
                             <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
                         <!-- Pesquisar Cadastros -->                    
-                        <a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
+                        <a class="ico" href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
                             <img src="img/Png/Retail/brighty_retail_16.png" height="32px" title="Pesquisar" /></a>
-                        
+                           
             </div>
             
     </body>
