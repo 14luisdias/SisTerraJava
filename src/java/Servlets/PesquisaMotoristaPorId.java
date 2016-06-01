@@ -67,15 +67,12 @@ public class PesquisaMotoristaPorId extends HttpServlet {
         MotoristaImpl motoristaDao = new MotoristaImpl();
         //pesquisei pelo motorista
         Motorista motorista = motoristaDao.findById(idMotorista);
-        
-        
         request.setAttribute("motorista", motorista);
         
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher("detalhemotorista.jsp");
         dispatcher.forward(request, response);
-        
-        
+               
     }
 
     /**

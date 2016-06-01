@@ -15,7 +15,7 @@
     <body>
          <h1>Detalhes do Motorista</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
                             <b>|</b> <a href="http://localhost:8080/sistTerra/motorista.jsp" style="text-decoration:none">Motorista</a>
-                            <b>|</b> <a href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">Anterior</a>  
+                            <b>|</b> <a href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">Listar Todos</a>  
         
         <%
             Motorista m = (Motorista) request.getAttribute("motorista");
