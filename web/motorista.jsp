@@ -48,7 +48,7 @@ and open the template in the editor.
                     <input type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>             
                     <!-- Limpar Dados -->
                     <input type="reset" value="Restaurar" />
-                    <input type="submit" value="Buscar"/>
+                    <input type="submit" value="Buscar"/><br /><br />
                 </fieldset>    
             </form>         
                        <!-- Novo Motorista -->      
