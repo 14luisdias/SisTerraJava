@@ -27,19 +27,15 @@
                     
                 </tr>
                 <%
-                   Motorista m = (Motorista) request.getAttribute("motorista");
-                  
-                MotoristaImpl motoristaImpl = new MotoristaImpl();
-                List<Motorista> list = motoristaImpl.getListAll();
+                   List<Motorista> m = (List<Motorista>) request.getAttribute("motorista");
                    
-                for(Motorista mot : list){
-                   
-              
+                  for(Motorista motorista : m){
+                              
                 %>
-                        <tr>
-                            <td colspan="2" width="90%"><a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=<%= m.getId() %>" style="text-decoration:none"> <%= m.getId()+" - "+m.getNome()%></a></td>
-                            <td><a href="http://localhost:8080/sistTerra/excluirMotorista?id=<%= m.getId() %>" style="text-decoration:none">Excluir</a></td>                                                              
-                        </tr>
+                   <tr>
+                      <td colspan="2" width="90%"><a href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=<%= motorista.getId() %>" style="text-decoration:none"> <%= motorista.getId()+" - "+motorista.getNome()%></a></td>
+                      <td><a href="http://localhost:8080/sistTerra/excluirMotorista?id=<%= motorista.getId() %>" style="text-decoration:none">Excluir</a></td>                                                              
+                    </tr>
                 <%
                    }
                 %>

@@ -90,25 +90,28 @@ public class MotoristaImpl implements MotoristaDao {
 		return list;
 	}
         
-        public Motorista findByNome(String nome){
-                 
-            String sql= "SELECT codmot,nommot from motorista where nommot LIKE'" + nome+"%'";
-            Motorista motorista = new Motorista();
+    
+    public List<Motorista> findByNome(String nome){
+         List<Motorista> list = new ArrayList<Motorista>();    
         try{
-            
+            String sql= "SELECT codmot,nommot from motorista where nommot LIKE'" + nome+"%'";
+            //Motorista motorista = new Motorista();
             stmt = conn.prepareStatement(sql);
             rs= stmt.executeQuery();
-           //rs.next();
-           
-          while (rs.next()) {
+        
+            while (rs.next()) {
+               Motorista motorista = new Motorista(); 
                motorista.setId(rs.getInt(1));
                motorista.setNome(notNull(rs.getString(2)));
+               
+               list.add(motorista);
+              
           }
              
 	   }catch (SQLException e) {
 		   e.printStackTrace();
 	   }
-           return motorista;
+           return list;
         }    
 
 	@Override

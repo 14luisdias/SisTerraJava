@@ -8,6 +8,7 @@ package Servlets;
 import controle.MotoristaImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -72,9 +73,9 @@ public class PesquisaMotorista extends HttpServlet {
                     String nomeMotorista = request.getParameter("nome");
                     MotoristaImpl motoristaDao = new MotoristaImpl();
                     //pesquisei pelo motorista
-                    Motorista motorista = motoristaDao.findByNome(nomeMotorista);
+                    List<Motorista> motoristas = motoristaDao.findByNome(nomeMotorista);
         
-                    request.setAttribute("motorista", motorista);
+                    request.setAttribute("motorista", motoristas);
                     RequestDispatcher dispatcher;
                     dispatcher = request.getRequestDispatcher("PesquisaPorNome.jsp");
                     dispatcher.forward(request, response);

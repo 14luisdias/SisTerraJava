@@ -37,7 +37,7 @@ and open the template in the editor.
         </div>
             <div id="conteudo">
             
-            <form id="formulario" autocomplete="off">    
+                <form id="formulario" autocomplete="off" action="pesquisaMotorista" method="get">    
                 <fieldset>
                     <legend>Motorista</legend>
 
@@ -45,7 +45,7 @@ and open the template in the editor.
                     <label>Código</label>
                     <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label class="campo_nome">Nome</label>
-                    <input type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>             
+                    <input type="text" name="nome" placeholder=" Digite seu nome..." size="25"/>             
                     <!-- Limpar Dados -->
                     <input type="reset" value="Restaurar" />
                     <input type="submit" value="Buscar"/><br /><br />
@@ -67,7 +67,7 @@ and open the template in the editor.
         </div>
                 <div id="rodape">
                     <p>Todos os direitos reservados</p></br>
-                    <p>Desenvolvido por: GilmarMH e Luiz BD</p>
+                    <p>Desenvolvido por: GilmarMH e Luis SD</p>
 
                 </div>
 </html>
