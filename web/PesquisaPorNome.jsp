@@ -12,13 +12,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Motoristas</title>
     </head>
-    <%
-            //Motorista m = (Motorista) request.getAttribute("motorista");
-    %>
-    
+      
     <body>
+         <table>
+            <tr><td><h1>Resultado da Busca</h1></td>
+            <td>    
+                <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+                <b>|</b> <a href="http://localhost:8080/sistTerra/motorista.jsp" style="text-decoration:none">Motorista</a>
+            </td>
+            </tr>
+        </table>
          <div>
             <table>
                 <tr> <td colspan="3" height="20"></td></tr>
