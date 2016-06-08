@@ -37,7 +37,7 @@ and open the template in the editor.
         </div>
             <div id="conteudo">
             
-            <form id="formulario" autocomplete="off">    
+            <form id="formulario" autocomplete="off" action="pesquisaFornecedorPorNome" method="get">    
                 <fieldset>
                     <legend>Fornecedor</legend>
 
@@ -53,13 +53,13 @@ and open the template in the editor.
                 </fieldset>    
             </form>         
                        <!-- Novo Motorista -->      
-                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarFornecedor.jsp">
                             <img src="img/Png/Office/add2-32.png" title="Novo" /></a>        
                        <!-- Listar Todos os Cadastros --> 
-                        <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/listarFornecedor.jsp">
                             <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
                         <!-- Pesquisar Cadastros -->                    
-                        <a class="ico" href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
+                        <a class="ico" href="http://localhost:8080/sistTerra/pesquisafornecedorporid?id=">
                             <img src="img/Png/Retail/brighty_retail_16.png" height="32px" title="Pesquisar" /></a>
                            
             </div>
@@ -68,7 +68,7 @@ and open the template in the editor.
         </div>
                 <div id="rodape">
                     <p>Todos os direitos reservados</p></br>
-                    <p>Desenvolvido por: GilmarMH e Luiz BD</p>
+                    <p>Desenvolvido por: GilmarMH e Luis SD</p>
 
                 </div>
 </html>
