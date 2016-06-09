@@ -30,43 +30,42 @@ and open the template in the editor.
                 <a href="http://localhost:8080/sistTerra/material.jsp" class="url"><li>Material</li></a>
                 <a href="http://localhost:8080/sistTerra/tipoDeVeiculo.jsp" class="url"><li>Tipo de Veículo</li></a>
                 <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Veículo</li></a>
-                <a href="http://localhost:8080/sistTerra/locais.jsp" class="url"><li>Locais</li></a>
+                <a href="http://localhost:8080/sistTerra/local.jsp" class="url"><li>local</li></a>
                 <a href="http://localhost:8080/sistTerra/rotas.jsp" class="url"><li>Rotas</li></a>
                 <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
              </ul>
         </div>
             <div id="conteudo">
             
-            <form id="formulario" autocomplete="off">    
+            <form id="formulario" autocomplete="off" action="pesquisaLocalPorNome" method="get">    
                 <fieldset>
-                    <legend>Locais</legend>
+                    <legend>Local</legend>
 
                     <hr /><br />
                     <label>Código</label>
                     <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label class="campo_nome">Nome</label>
-                    <input type="text" name="nome" placeholder=" Digite seu nome..." size="25" required/>             
+                    <input type="text" name="nome" placeholder=" Digite seu nome..." size="25"/>             
                     <!-- Limpar Dados -->
-                    <input type="reset" value="Restaurar" /><br /><br />
+                    <input type="reset" value="Restaurar" />
+                    <input type="submit" value="Buscar"/><br /><br />
                 </fieldset>    
             </form>         
-                       <!-- Novo Motorista -->      
-                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">
+                       <!-- Novo LOCAL -->      
+                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarLocal.jsp">
                             <img src="img/Png/Office/add2-32.png" title="Novo" /></a>        
                        <!-- Listar Todos os Cadastros --> 
-                        <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/listarLocal.jsp">
                             <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
                         <!-- Pesquisar Cadastros -->                    
-                        <a class="ico" href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
-                            <img src="img/Png/Retail/brighty_retail_16.png" height="32px" title="Pesquisar" /></a>
-                    
+                        
             </div>
             
     </body>
         </div>
                 <div id="rodape">
                     <p>Todos os direitos reservados</p></br>
-                    <p>Desenvolvido por: GilmarMH e Luiz BD</p>
+                    <p>Desenvolvido por: GilmarMH e Luis SD</p>
 
                 </div>
 </html>

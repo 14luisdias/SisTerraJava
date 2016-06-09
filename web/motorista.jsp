@@ -30,7 +30,7 @@ and open the template in the editor.
                 <a href="http://localhost:8080/sistTerra/material.jsp" class="url"><li>Material</li></a>
                 <a href="http://localhost:8080/sistTerra/tipoDeVeiculo.jsp" class="url"><li>Tipo de Veículo</li></a>
                 <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Veículo</li></a>
-                <a href="http://localhost:8080/sistTerra/locais.jsp" class="url"><li>Locais</li></a>
+                <a href="http://localhost:8080/sistTerra/local.jsp" class="url"><li>Locais</li></a>
                 <a href="http://localhost:8080/sistTerra/rotas.jsp" class="url"><li>Rotas</li></a>
                 <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
              </ul>
@@ -59,8 +59,6 @@ and open the template in the editor.
                         <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp">
                             <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
                         <!-- Pesquisar Cadastros -->                    
-                        <a class="ico" href="http://localhost:8080/sistTerra/pesquisamotoristaporid?id=">
-                            <img src="img/Png/Retail/brighty_retail_16.png" height="32px" title="Pesquisar" /></a>
                         
             </div>
             

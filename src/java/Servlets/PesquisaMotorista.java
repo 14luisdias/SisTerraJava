@@ -77,7 +77,7 @@ public class PesquisaMotorista extends HttpServlet {
         
                     request.setAttribute("motorista", motoristas);
                     RequestDispatcher dispatcher;
-                    dispatcher = request.getRequestDispatcher("PesquisaPorNome.jsp");
+                    dispatcher = request.getRequestDispatcher("PesquisaMotoristaPorNome.jsp");
                     dispatcher.forward(request, response);
             }
             if ((!"".equals(request.getParameter("codigo")))&&("".equals(request.getParameter("nome")))){

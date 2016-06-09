@@ -86,7 +86,7 @@ public class AtualizarTipoDeVeiculo extends HttpServlet {
            
              //salva
            
-            tipoDeVeiculoDao.atualizar(tipoDeVeiculo);
+                tipoDeVeiculoDao.atualizar(tipoDeVeiculo);
            //retorna pra a tela de cadastro
         }
         

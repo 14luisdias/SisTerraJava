@@ -5,22 +5,23 @@
  */
 package Servlets;
 
-import controle.FornecedorImpl;
+import controle.LocalImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Fornecedor;
+import modelo.Local;
 
 /**
  *
- * @author Qualidade
+ * @author 14luisdias
  */
-@WebServlet(name = "ExcluirFornecedor", urlPatterns = {"/excluirFornecedor"})
-public class ExcluirFornecedor extends HttpServlet {
+@WebServlet(name = "CadastrarLocal", urlPatterns = {"/cadastrarLocal"})
+public class CadastrarLocal extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +40,10 @@ public class ExcluirFornecedor extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ExcluirMotorista</title>");            
+            out.println("<title>Servlet CadastrarMotorista</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ExcluirMotorista at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CadastrarMotorista at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,21 +61,7 @@ public class ExcluirFornecedor extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        
-        
-            Fornecedor fornecedor = new Fornecedor();//cria o objeto Motorista
-            fornecedor.setId(Integer.valueOf(request.getParameter("id"))); 
-            FornecedorImpl fornecedorDao = new FornecedorImpl();//cria o objeto contatoDao
-        
-             //exclui
-            fornecedorDao.remover(fornecedor);
-            //retorna pra a tela da lista dos morista
-                  
-                         
-            response.sendRedirect("listarFornecedor.jsp");
-
-   
+        processRequest(request, response);
     }
 
     /**
@@ -88,7 +75,23 @@ public class ExcluirFornecedor extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        if(!"".equals(request.getParameter("nome"))){
+        
+            Local local = new Local();//cria o objeto Motorista
+            local.setNome(request.getParameter("nome"));//preenche o objeto 
+            LocalImpl localDao = new LocalImpl();//cria o objeto localDao
+        
+             //salva
+            localDao.salvar(local);
+            //retorna pra a tela de cadastro
+        }else{
+           
+           // out.println("Digite um Nome Valido");
+        }
+        
+        response.sendRedirect("cadastrarLocal.jsp");
+              
     }
 
     /**

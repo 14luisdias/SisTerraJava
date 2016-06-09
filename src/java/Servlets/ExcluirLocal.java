@@ -5,7 +5,7 @@
  */
 package Servlets;
 
-import controle.FornecedorImpl;
+import controle.LocalImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,14 +13,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Fornecedor;
+import modelo.Local;
 
 /**
  *
  * @author Qualidade
  */
-@WebServlet(name = "ExcluirFornecedor", urlPatterns = {"/excluirFornecedor"})
-public class ExcluirFornecedor extends HttpServlet {
+@WebServlet(name = "ExcluirLocal", urlPatterns = {"/excluirLocal"})
+public class ExcluirLocal extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -63,16 +63,16 @@ public class ExcluirFornecedor extends HttpServlet {
         //processRequest(request, response);
         
         
-            Fornecedor fornecedor = new Fornecedor();//cria o objeto Motorista
-            fornecedor.setId(Integer.valueOf(request.getParameter("id"))); 
-            FornecedorImpl fornecedorDao = new FornecedorImpl();//cria o objeto contatoDao
+            Local local = new Local();//cria o objeto Motorista
+            local.setId(Integer.valueOf(request.getParameter("id"))); 
+            LocalImpl localDao = new LocalImpl();//cria o objeto contatoDao
         
              //exclui
-            fornecedorDao.remover(fornecedor);
+            localDao.remover(local);
             //retorna pra a tela da lista dos morista
                   
                          
-            response.sendRedirect("listarFornecedor.jsp");
+            response.sendRedirect("listarLocal.jsp");
 
    
     }

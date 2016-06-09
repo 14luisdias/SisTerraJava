@@ -5,22 +5,25 @@
  */
 package Servlets;
 
-import controle.FornecedorImpl;
+import controle.LocalImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.sql.ResultSet;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Fornecedor;
+import modelo.Local;
 
 /**
  *
  * @author Qualidade
  */
-@WebServlet(name = "ExcluirFornecedor", urlPatterns = {"/excluirFornecedor"})
-public class ExcluirFornecedor extends HttpServlet {
+@WebServlet(name = "PesquisaLocalPorNome", urlPatterns = {"/pesquisaLocalPorNome"})
+public class PesquisaLocalPorNome extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,16 +36,19 @@ public class ExcluirFornecedor extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+            
+            
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ExcluirMotorista</title>");            
+            out.println("<title>Servlet PesquisaMotorista</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ExcluirMotorista at " + request.getContextPath() + "</h1>");
+         // out.println("<h1>Servlet PesquisaMotorista at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,21 +66,30 @@ public class ExcluirFornecedor extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         //processRequest(request, response);
+            if (("".equals(request.getParameter("codigo")))&&(!"".equals(request.getParameter("nome")))){   
+                   
+                    String nomeLocal = request.getParameter("nome");
+                    LocalImpl localDao = new LocalImpl();
+                    //pesquisei pelo motorista
+                    List<Local> local = localDao.findByNome(nomeLocal);
         
-        
-            Fornecedor fornecedor = new Fornecedor();//cria o objeto Motorista
-            fornecedor.setId(Integer.valueOf(request.getParameter("id"))); 
-            FornecedorImpl fornecedorDao = new FornecedorImpl();//cria o objeto contatoDao
-        
-             //exclui
-            fornecedorDao.remover(fornecedor);
-            //retorna pra a tela da lista dos morista
-                  
-                         
-            response.sendRedirect("listarFornecedor.jsp");
-
-   
+                    request.setAttribute("local", local);
+                    RequestDispatcher dispatcher;
+                    dispatcher = request.getRequestDispatcher("PesquisaLocalPorNome.jsp");
+                    dispatcher.forward(request, response);
+            }
+            if ((!"".equals(request.getParameter("codigo")))&&("".equals(request.getParameter("nome")))){
+                int cod = Integer.valueOf(request.getParameter("codigo"));
+                 response.sendRedirect("pesquisaLocalporid?id="+cod);
+                                        
+            }
+                
+            if (("".equals(request.getParameter("codigo")))&&("".equals(request.getParameter("nome")))){
+               response.sendRedirect("local.jsp");
+              
+            }
     }
 
     /**
@@ -89,6 +104,16 @@ public class ExcluirFornecedor extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+         response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            
+           
+            
+            
+        }
+        
     }
 
     /**

@@ -5,8 +5,8 @@
 --%>
 
 <%@page import="java.util.List"%>
-<%@page import="controle.FornecedorImpl"%>
-<%@page import="modelo.Fornecedor"%>
+<%@page import="controle.LocalImpl"%>
+<%@page import="modelo.Local"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,7 +20,7 @@
             <tr><td><h1>Resultado da Busca</h1></td>
             <td>    
                 <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
-                <b>|</b> <a href="http://localhost:8080/sistTerra/fornecedor.jsp" style="text-decoration:none">Fornecedor</a>
+                <b>|</b> <a href="http://localhost:8080/sistTerra/local.jsp" style="text-decoration:none">Local</a>
             </td>
             </tr>
         </table>
@@ -28,18 +28,18 @@
             <table>
                 <tr> <td colspan="3" height="20"></td></tr>
                 <tr>
-                    <td width="0"><b>Código | Nome</b></td>
+                    <td width="0"><b>Código | Descrição</b></td>
                     
                 </tr>
                 <%
-                   List<Fornecedor> f = (List<Fornecedor>) request.getAttribute("fornecedor");
+                   List<Local> l = (List<Local>) request.getAttribute("local");
                    
-                  for(Fornecedor fornecedor: f){
+                  for(Local local: l){
                               
                 %>
                    <tr>
-                      <td colspan="2" width="90%"><a href="http://localhost:8080/sistTerra/pesquisafornecedorporid?id=<%= fornecedor.getId() %>" style="text-decoration:none"> <%= fornecedor.getId()+" - "+fornecedor.getNome()%></a></td>
-                      <td><a href="http://localhost:8080/sistTerra/excluirFornecedor?id=<%= fornecedor.getId() %>" style="text-decoration:none">Excluir</a></td>                                                              
+                      <td colspan="2" width="90%"><a href="http://localhost:8080/sistTerra/pesquisaLocalporid?id=<%= local.getId() %>" style="text-decoration:none"> <%= local.getId()+" - "+local.getNome()%></a></td>
+                      <td><a href="http://localhost:8080/sistTerra/excluirLocal?id=<%= local.getId() %>" style="text-decoration:none">Excluir</a></td>                                                              
                     </tr>
                 <%
                    }
