@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Local;
+import modelo.local;
 
 /**
  *
@@ -78,7 +78,7 @@ public class AtualizarLocal extends HttpServlet {
         int codigo = Integer.valueOf(request.getParameter("id"));
         if(!"".equals(request.getParameter("nome"))){
         
-            Local local = new Local();//cria o objeto Fornecedor
+            local local = new local();//cria o objeto Fornecedor
             
             local.setId(Integer.valueOf(request.getParameter("id")));
             local.setNome(request.getParameter("nome"));//preenche o objeto contato

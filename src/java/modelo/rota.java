@@ -9,9 +9,10 @@ package modelo;
  *
  * @author maicon
  */
-public class Local{
+public class rota{
     private int id;
     private String nome;
+    
 
      public int getId() {
         return id;

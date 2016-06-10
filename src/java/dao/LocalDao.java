@@ -2,13 +2,13 @@ package dao;
 
 
 import java.util.List;
-import modelo.Local;
+import modelo.local;
 public interface LocalDao {
 	
-	public void salvar(Local local);
-	public void atualizar(Local local);
-	public void remover(Local local);
-	public List<Local> getListAll();
-	public Local findById(int id);
-        public List<Local> findByNome(String nome);
+	public void salvar(local local);
+	public void atualizar(local local);
+	public void remover(local local);
+	public List<local> getListAll();
+	public local findById(int id);
+        public List<local> findByNome(String nome);
 }

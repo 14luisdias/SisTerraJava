@@ -31,7 +31,7 @@ and open the template in the editor.
                 <a href="http://localhost:8080/sistTerra/tipoDeVeiculo.jsp" class="url"><li>Tipo de Veículo</li></a>
                 <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Veículo</li></a>
                 <a href="http://localhost:8080/sistTerra/local.jsp" class="url"><li>local</li></a>
-                <a href="http://localhost:8080/sistTerra/rotas.jsp" class="url"><li>Rotas</li></a>
+                <a href="http://localhost:8080/sistTerra/rota.jsp" class="url"><li>Rotas</li></a>
                 <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
              </ul>
         </div>
