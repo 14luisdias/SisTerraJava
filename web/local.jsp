@@ -43,7 +43,7 @@ and open the template in the editor.
 
                     <hr /><br />
                     <label>Código</label>
-                    <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
+                    <input size="25" maxlength="3" type="text" name="codigo"/><br />
                     <label class="campo_nome">Nome</label>
                     <input type="text" name="nome" placeholder=" Digite seu nome..." size="25"/>             
                     <!-- Limpar Dados -->

@@ -37,28 +37,24 @@ and open the template in the editor.
         </div>
             <div id="conteudo">
             
-            <form id="formulario" autocomplete="off">    
+                <form id="formulario" autocomplete="off" action="pesquisaMaterialPorNome" method="get">    
                 <fieldset>
                     <legend>Material</legend>
 
                     <hr /><br />
                     <label>Código</label>
-                    <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
+                    <input size="25" maxlength="3" type="text" name="codigo"/><br />
                     <label>Descrição</label>
-                    <input type="text" name="descricao" placeholder="(Barro, Piçarra, Brita, Areia, etc.)" size="25" required/></br>
-                    <label>Preco</label>
-                    <input type="text" name="preco" size="25" required/></br>
-                    <label>Unidade</label>
-                    <input type="text" name="unidade" size="25" required/>
-                    <!-- Limpar Dados -->
-                    <input type="reset" value="Restaurar" /><br /><br />
+                    <input type="text" name="nome" placeholder="(Barro, Piçarra, Brita, Areia, etc.)" size="25" />                  <!-- Limpar Dados -->
+                    <input type="reset" value="Restaurar" />
+                    <input type="submit" value="Pesquisar" /><br /><br />
                 </fieldset>    
             </form>         
                        <!-- Novo Motorista -->      
-                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarMotorista.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/cadastrarMaterial.jsp">
                             <img src="img/Png/Office/add2-32.png" title="Novo" /></a>        
                        <!-- Listar Todos os Cadastros --> 
-                        <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/listarMaterial.jsp">
                             <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
                         <!-- Pesquisar Cadastros -->                    
                        
@@ -68,7 +64,7 @@ and open the template in the editor.
         </div>
                 <div id="rodape">
                     <p>Todos os direitos reservados</p></br>
-                    <p>Desenvolvido por: GilmarMH e Luiz BD</p>
+                    <p>Desenvolvido por: GilmarMH e Luis SD</p>
 
                 </div>
 </html>
