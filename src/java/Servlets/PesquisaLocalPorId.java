@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.local;
+import modelo.Local;
 
 /**
  *
@@ -66,7 +66,7 @@ public class PesquisaLocalPorId extends HttpServlet {
         int idLocal = Integer.valueOf(request.getParameter("id"));
         LocalImpl localDao = new LocalImpl();
         //pesquisei pelo motorista
-        local local = localDao.findById(idLocal);
+        Local local = localDao.findById(idLocal);
         request.setAttribute("local", local);
         
         RequestDispatcher dispatcher;

@@ -13,7 +13,7 @@ import dao.ConnectionFactory;
 import dao.LocalDao;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import modelo.local;
+import modelo.Local;
 
 
 
@@ -24,7 +24,7 @@ public class LocalImpl implements LocalDao {
 	ResultSet rs;
 
 	@Override
-	public void salvar(local local) {
+	public void salvar(Local local) {
 		try {
 			String sql = "insert into local "
                                 + "(nomloc) values(?)";
@@ -40,7 +40,7 @@ public class LocalImpl implements LocalDao {
 	}
 
 	@Override
-	public void atualizar(local  local) {
+	public void atualizar(Local  local) {
 		// TODO Auto-generated method stub
             String sql = "update local set nomloc = ? "
                     + "where codloc = ?";
@@ -58,7 +58,7 @@ public class LocalImpl implements LocalDao {
 	}
 
 	@Override
-	public void remover(local local) {
+	public void remover(Local local) {
 		// TODO Auto-generated method stub
             String sql = "delete from local where codloc = ?";
             try {
@@ -72,14 +72,14 @@ public class LocalImpl implements LocalDao {
 	}
 
 	@Override
-	public List<local> getListAll() {
-		List<local> list = new ArrayList<local>();
+	public List<Local> getListAll() {
+		List<Local> list = new ArrayList<Local>();
 		try {
 			String sql = "select codloc, nomloc from local";
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while(rs.next()){
-				local local = new local();
+				Local local = new Local();
 				local.setId(rs.getInt(1));
 				local.setNome(notNull(rs.getString(2)));
                                				
@@ -92,8 +92,8 @@ public class LocalImpl implements LocalDao {
 	}
         
     
-    public List<local> findByNome(String nome){
-         List<local> list = new ArrayList<local>();    
+    public List<Local> findByNome(String nome){
+         List<Local> list = new ArrayList<Local>();    
         try{
             String sql= "SELECT codloc,nomloc from local where nomloc LIKE'" + nome+"%'";
           
@@ -101,7 +101,7 @@ public class LocalImpl implements LocalDao {
             rs= stmt.executeQuery();
         
             while (rs.next()) {
-               local local = new local(); 
+               Local local = new Local(); 
                local.setId(rs.getInt(1));
                local.setNome(notNull(rs.getString(2)));
                
@@ -116,9 +116,9 @@ public class LocalImpl implements LocalDao {
         }    
 
 	@Override
-	public local findById(int id) {
+	public Local findById(int id) {
 		String sql = "select codloc, nomloc from Local where codloc = ?";
-                local local = new local();
+                Local local = new Local();
                 try{
                     stmt = conn.prepareStatement(sql);
                     stmt.setInt(1, id);

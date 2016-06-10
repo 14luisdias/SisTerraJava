@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.local;
+import modelo.Local;
 
 /**
  *
@@ -78,7 +78,7 @@ public class CadastrarLocal extends HttpServlet {
         
         if(!"".equals(request.getParameter("nome"))){
         
-            local local = new local();//cria o objeto Motorista
+            Local local = new Local();//cria o objeto Motorista
             local.setNome(request.getParameter("nome"));//preenche o objeto 
             LocalImpl localDao = new LocalImpl();//cria o objeto localDao
         

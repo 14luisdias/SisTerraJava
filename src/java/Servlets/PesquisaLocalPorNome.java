@@ -16,7 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.local;
+import modelo.Local;
 
 /**
  *
@@ -73,7 +73,7 @@ public class PesquisaLocalPorNome extends HttpServlet {
                     String nomeLocal = request.getParameter("nome");
                     LocalImpl localDao = new LocalImpl();
                     //pesquisei pelo motorista
-                    List<local> local = localDao.findByNome(nomeLocal);
+                    List<Local> local = localDao.findByNome(nomeLocal);
         
                     request.setAttribute("local", local);
                     RequestDispatcher dispatcher;

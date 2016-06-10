@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.local;
+import modelo.Local;
 
 /**
  *
@@ -63,7 +63,7 @@ public class ExcluirLocal extends HttpServlet {
         //processRequest(request, response);
         
         
-            local local = new local();//cria o objeto Motorista
+            Local local = new Local();//cria o objeto Motorista
             local.setId(Integer.valueOf(request.getParameter("id"))); 
             LocalImpl localDao = new LocalImpl();//cria o objeto contatoDao
         
