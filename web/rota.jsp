@@ -1,3 +1,8 @@
+<%@page import="modelo.Local"%>
+<%@page import="controle.LocalImpl"%>
+<%@page import="modelo.Rota"%>
+<%@page import="java.util.List"%>
+<%@page import="controle.RotaImpl"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -42,20 +47,26 @@ and open the template in the editor.
                     <legend>Rotas</legend>
 
                     <hr /><br />
+            <%
+                LocalImpl localImpl = new LocalImpl();
+                List<Local> list = localImpl.getListAll();
+            %>
                     <label>Código</label>
                     <input size="25" maxlength="3" type="text" name="codigo"/><br />
                     <label class="campo_nome">Saída</label>
                     <select name="saida"  style=width:400px>
-                 <%   //  for (Estado e : list){ %>
-                             <option value="<%//=e.getId()%>"><%//=e.getNome()%></option>
-                 <%   //  }%>
+                        <option value="0">(selecione Saida) </option>
+                 <%     for (Local l : list){ %>
+                             <option value="<%=l.getId()%>"><%=l.getNome()%></option>
+                 <%     }%>
                     </select><br>
                     
                     <label class="campo_nome">Destino</label>
                     <select name="destino"  style=width:400px>
-                 <% //    for (Estado e : list){ %>
-                             <option value="<%//=e.getId()%>"><%//=e.getNome()%></option>
-                 <%   //  }%>
+                          <option value="0">(selecione Destino) </option>
+                 <%     for (Local l : list){ %>
+                             <option value="<%=l.getId()%>"><%=l.getNome()%></option>
+                 <%     }%>
                     </select><br>         
                     <!-- Limpar Dados -->
                     <input type="reset" value="Restaurar" />

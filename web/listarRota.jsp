@@ -36,8 +36,8 @@
                     for(Rota r : list){
                 %>
                         <tr>
-                            <td colspan="6" width=94%"><a href="http://localhost:8080/sistTerra/pesquisaLocalporid?id=<%= r.getId() %>" style="text-decoration:none"> <%= r.getId()+" - "+r.getNomeSaida()+" / "+r.getNomeDestino()+" - "+r.getDmt()+" mt" %></a></td>
-                            <td><a href="http://localhost:8080/sistTerra/excluirLocal?id=<%= r.getId() %>" style="text-decoration:none">Excluir</a></td>                                                              
+                            <td colspan="6" width="94%"><a href="http://localhost:8080/sistTerra/pesquisaRotaporid?id=<%= r.getId() %>" style="text-decoration:none"> <%= r.getId()+" - "+r.getNomeSaida()+" / "+r.getNomeDestino()+" - "+r.getDmt()+" mt" %></a></td>
+                            <td><a href="http://localhost:8080/sistTerra/excluirRota?id=<%= r.getId() %>" style="text-decoration:none">Excluir</a></td>                                                              
                         </tr>
                 <%
                     }
