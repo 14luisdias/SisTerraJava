@@ -1,20 +1,22 @@
 *{border:0;margin:0;padding:0;}
-body{font-family: Gill Sans MT;}
-#menu{height:100%;background-color:#efefef;width:200px;float:left;border-right:1px solid #ccc;}
+body{font-family: Segoe ui;}
+#menu{height:100%;background-color:#efefef;width:140px;float:left;border-right:1px solid #ccc;}
 .menu-principal li{display:block;}
 #cabecalho{background: #efefef;height:160px;line-height:160px;width:1200px;}
 #conteudo{padding:10px;padding-left:20px;height:420px;width:500px;float:left;}
 #rodape{height:80px; line-height: 80px; background-color:#222;width:100%;position:fixed;bottom: 0;}
 #rodape p{text-align: center;color:#fff;}
 
-.img-logo,.img-name{position:absolute;top:5px;left:40px;}
+.img-logo{position:absolute;top:25px;left:25px;}
 .img-logo:hover{opacity: 0.7;}
-.img-name{left:40px;top:50px;padding-top:3px;padding-bottom:3px;padding-left:5px;padding-right:5px;background:transparent;border-left:3px solid white;border-top:3px solid white;border-radius: 15px;}
 
-ul li{overflow:hidden;background: #efefef;text-align: center;padding:8px;}
-ul li a{text-decoration:none;font-size:17px;font-family: Gill Sans MT;}
-ul li:hover{background:#ddd;border-right: 1px solid #ff3300;}
-.url{color:#767676;text-decoration:none;}
+#menu ul li{overflow:hidden;background:#efefef;border-bottom:1px solid #fff;padding:10px;padding-left:12px;}
+#menu ul li a{text-decoration:none;}
+#menu ul li:hover{background:#fff;margin-left:-3px;border-left: 3px solid #087137;color:#087137;}
+
+legend{padding-left:8px;padding-right:8px;}
+
+.url{color:#767676;text-decoration:none;font-size:13px;}
 .url:hover{color:#333;}
 hr{border:1px solid #888; width:85%;}
 
