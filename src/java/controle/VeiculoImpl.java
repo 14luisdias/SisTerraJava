@@ -34,8 +34,8 @@ public class VeiculoImpl implements VeiculoDao {
 			
                         stmt.setString(1, veiculo.getPlaca());
                         stmt.setDouble(2, veiculo.getCapacidade());
-                        stmt.setInt(4, veiculo.getCodTipo());
-                        stmt.setInt(3, veiculo.getCodMotorista());
+                        stmt.setInt(3, veiculo.getCodTipo());
+                        stmt.setInt(4, veiculo.getCodMotorista());
                         
                         
                         
@@ -56,8 +56,8 @@ public class VeiculoImpl implements VeiculoDao {
                
                 stmt.setString(1, veiculo.getPlaca());
                 stmt.setDouble(2, veiculo.getCapacidade());
-                stmt.setInt(4, veiculo.getCodTipo());
-                stmt.setInt(3, veiculo.getCodMotorista());
+                stmt.setInt(3, veiculo.getCodTipo());
+                stmt.setInt(4, veiculo.getCodMotorista());
                 stmt.setInt(5, veiculo.getId());
                 
                 stmt.executeUpdate();
@@ -115,9 +115,9 @@ public class VeiculoImpl implements VeiculoDao {
 	public Veiculo findById(int id) {
 		
                 
-                String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destip,m.nommot "
+                String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destipo,m.nommot "
                                 +   "FROM veiculo v, tipoveiculo t, motorista m" 
-                                +   " WHERE v.codtipo = t.codtip and v.codmot = m.codmot"
+                                +   " WHERE v.codtipo = t.codtipo and v.codmot = m.codmot"
                                 +   "and v.codvei = ?";
                 
                 Veiculo veiculo = new Veiculo();
@@ -145,9 +145,9 @@ public class VeiculoImpl implements VeiculoDao {
         List<Veiculo> list = new ArrayList<Veiculo>();    
         try{
             
-               String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destip,m.nommot "
+               String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destipo,m.nommot "
                                 +   "FROM veiculo v, tipoveiculo t, motorista m" 
-                                +   " WHERE v.codtipo = t.codtip and v.codmot = m.codmot"
+                                +   " WHERE v.codtipo = t.codtipo and v.codmot = m.codmot"
                                 +   "and v.codtipo = ?";        
                       
               stmt = conn.prepareStatement(sql);
@@ -181,9 +181,9 @@ public class VeiculoImpl implements VeiculoDao {
     public List<Veiculo> findByMotorista(int codMotorista) {
         List<Veiculo> list = new ArrayList<Veiculo>();    
         try{
-             String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destip,m.nommot "
+             String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destipo,m.nommot "
                                 +   "FROM veiculo v, tipoveiculo t, motorista m" 
-                                +   " WHERE v.codtipo = t.codtip and v.codmot = m.codmot"
+                                +   " WHERE v.codtipo = t.codtipo and v.codmot = m.codmot"
                                 +   "and v.codmot = ?";        
                       
               stmt = conn.prepareStatement(sql);
@@ -218,9 +218,9 @@ public class VeiculoImpl implements VeiculoDao {
     
          List<Veiculo> list = new ArrayList<Veiculo>();    
         try{
-             String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destip,m.nommot "
+             String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destipo,m.nommot "
                                 +   "FROM veiculo v, tipoveiculo t, motorista m" 
-                                +   " WHERE v.codtipo = t.codtip and v.codmot = m.codmot"
+                                +   " WHERE v.codtipo = t.codtipo and v.codmot = m.codmot"
                                 +   "and v.plavei = ?";        
                       
               stmt = conn.prepareStatement(sql);
