@@ -1,3 +1,8 @@
+<%@page import="modelo.TipoDeVeiculo"%>
+<%@page import="modelo.Motorista"%>
+<%@page import="controle.MotoristaImpl"%>
+<%@page import="java.util.List"%>
+<%@page import="controle.TipoDeVeiculoImpl"%>
 <jsp:include page="cabecalho.jsp" />
         <div id="menu">
             <ul class="menu-principal">
@@ -15,19 +20,35 @@
             
             <form id="formulario" autocomplete="off">    
                 <fieldset>
+                <%
+                      TipoDeVeiculoImpl tipoImpl = new TipoDeVeiculoImpl();
+                      List<TipoDeVeiculo> list = tipoImpl.getListAll();
+                
+                      MotoristaImpl motoristaImpl = new MotoristaImpl();
+                      List <Motorista> list2 = motoristaImpl.getListAll();
+
+                %>
                     <legend>Veículo</legend>
 
                     <hr /><br />
                     <label>Código</label>
                     <input size="25" maxlength="3" type="text" name="codigo" requerid/><br />
                     <label>Placa</label>
-                    <input type="text" name="descricao" size="25" required/></br>
-                    <label>Capacidade</label>
-                    <input type="text" name="preco" size="25" required/></br>
-                    <label>Cód. Tipo Veículo</label>
-                    <input type="text" name="unidade" size="25" required/></br>
+                    <input type="text" name="descricao" size="25"/></br>
+                    <label>Tipo Veículo</label>
+                     <select name="tipo"  style=width:400px>
+                        <option value="0">(selecione tipo de veiculo) </option>
+                 <%     for (TipoDeVeiculo t : list){ %>
+                             <option value="<%=t.getId()%>"><%=t.getNome()%></option>
+                 <%     }%>
+                    </select><br>
                     <label>Cód. Motorista</label>
-                    <input type="text" name="unidade" placeholder="Trucada, Toco, Carreta, etc." size="25" required/>
+                     <select name="motorista"  style=width:400px>
+                          <option value="0">(selecione motorista) </option>
+                 <%     for (Motorista m : list2){ %>
+                             <option value="<%=m.getId()%>"><%=m.getNome()%></option>
+                 <%     }%>
+                    </select><br> <br>
                     <!-- Limpar Dados -->
                     <input type="reset" value="Restaurar" /><br /><br />
                 </fieldset>    
