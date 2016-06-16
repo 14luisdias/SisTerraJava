@@ -36,7 +36,7 @@
                         <a class="ico" href="http://localhost:8080/sistTerra/cadastrarVeiculo.jsp">
                             <img src="img/Png/Office/add2-32.png" title="Novo" /></a>        
                        <!-- Listar Todos os Cadastros --> 
-                        <a class="ico" href="http://localhost:8080/sistTerra/listarveiculo.jsp">
+                        <a class="ico" href="http://localhost:8080/sistTerra/listarVeiculo.jsp">
                             <img src="img/Png/Retail/brighty_retail_21.png" height="32px" title="Listar Todos" /></a>
                         <!-- Pesquisar Cadastros -->                    
                         

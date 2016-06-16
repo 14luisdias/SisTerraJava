@@ -86,9 +86,9 @@ public class VeiculoImpl implements VeiculoDao {
 		List<Veiculo> list = new ArrayList<Veiculo>();
 		try {
                                      
-			String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destip,m.nommot "
+			String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destipo,m.nommot "
                                 +    "FROM veiculo v, tipoveiculo t, motorista m" 
-                                +    " WHERE v.codtipo = t.codtip and v.codmot = m.codmot";
+                                +    " WHERE v.codtipo = t.codtipo and v.codmot = m.codmot";
 			stmt = conn.prepareStatement(sql);
 			rs = stmt.executeQuery();
 			while(rs.next()){
