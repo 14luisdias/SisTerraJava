@@ -6,41 +6,41 @@
 
 <%@page import="modelo.Fornecedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Detalhes do Fornecedor</title>
-    </head>
-    <body>
-         <h1>Detalhes do Fornecedor</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
-                            <b>|</b> <a href="http://localhost:8080/sistTerra/fornecedor.jsp" style="text-decoration:none">Fornecedor</a>
-                            <b>|</b> <a href="http://localhost:8080/sistTerra/listarFornecedor.jsp" style="text-decoration:none">Listar Todos</a>  
+<jsp:include page="cabecalho.jsp" />
+        <div id="menu">
+            <ul class="menu-principal">
+                <a href="http://localhost:8080/sistTerra/motorista.jsp" class="url"><li>Motorista</li></a>
+                <a href="http://localhost:8080/sistTerra/fornecedor.jsp" class="url"><li>Fornecedor</li></a>
+                <a href="http://localhost:8080/sistTerra/material.jsp" class="url"><li>Material</li></a>
+                <a href="http://localhost:8080/sistTerra/tipoDeVeiculo.jsp" class="url"><li>Tipo de Veículo</li></a>
+                <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Veículo</li></a>
+                <a href="http://localhost:8080/sistTerra/local.jsp" class="url"><li>Locais</li></a>
+                <a href="http://localhost:8080/sistTerra/rota.jsp" class="url"><li>Rotas</li></a>
+                <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
+             </ul>
+        </div>
+            <div id="conteudo"> 
         
         <%
             Fornecedor f = (Fornecedor) request.getAttribute("fornecedor");
         %>
-        <form action="atualizarFornecedor" method="post">
-            <table>
-            
-                <tr> <td colspan="2" height="50"></td></tr>
-                <tr>
-                     <td>Código: </td>
-                     <td><input type="text" name="cod" value="<%= f.getId()%>" disabled="disabled"/></td>
-                        
-                </tr>
-                <tr>
-                    <td size="40%">Nome</td>
-                    <td><input type="text" name="nome" value="<%= f.getNome()%>" size="70" required/></td>
-                    <td><input type="hidden" name="id" value="<%= f.getId()%>"/></td>
-                </tr>
-                <tr><td colspan="2" align="right">
-                        <input type="submit" value="Atualizar" />
-                    </td>
-                </tr>
-            </table>
+        <form id="formulario" action="atualizarFornecedor" method="post">
+            <fieldset>
+                <legend>Cadastrar Fornecedor</legend>
+
+                <hr /><br />
+                <label>Código</label>
+                    <input type="text" name="cod" value="<%= f.getId()%>" disabled="disabled"/>
+                <label>Nome</label>
+                    <input type="text" name="nome" value="<%= f.getNome()%>" size="70" required/>
+                    <input type="hidden" name="id" value="<%= f.getId()%>"/>
+                    <input type="submit" value="Atualizar" /><br/><br/>
+            </fieldset>
         </form>
+            <a class="ico" href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+            <a class="ico" href="http://localhost:8080/sistTerra/fornecedor.jsp" style="text-decoration:none">Fornecedor</a>
+            <a class="ico" href="http://localhost:8080/sistTerra/listarFornecedor.jsp" style="text-decoration:none">Listar Todos</a>  
+            </div>
         
         
-    </body>
-</html>
+<jsp:include page="rodape.jsp" />
