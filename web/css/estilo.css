@@ -3,7 +3,7 @@ body{font-family: Segoe ui;}
 #menu{height:100%;background-color:#efefef;width:140px;float:left;border-right:1px solid #ccc;}
 .menu-principal li{display:block;}
 #cabecalho{background: #efefef;height:160px;line-height:160px;width:1200px;}
-#conteudo{padding:10px;padding-left:20px;height:420px;width:500px;float:left;}
+#conteudo{padding:10px;padding-left:20px;height:520px;width:500px;float:left;}
 #rodape{height:80px; line-height: 80px; background-color:#222;width:100%;position:fixed;bottom: 0;}
 #rodape p{text-align: center;color:#fff;}
 
