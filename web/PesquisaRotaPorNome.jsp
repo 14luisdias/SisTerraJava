@@ -18,10 +18,6 @@
     <body>
          <table>
             <tr><td><h1>Resultado da Busca</h1></td>
-            <td>    
-                <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
-                <b>|</b> <a href="http://localhost:8080/sistTerra/rota.jsp" style="text-decoration:none">Rota</a>
-            </td>
             </tr>
         </table>
          <div>
@@ -45,7 +41,10 @@
                    }
                 %>
                 
-            </table>
-        </div>
-     </body>
-</html>
+            </table><br /><br /> 
+                <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
+                <a class="ico" href="http://localhost:8080/sistTerra/rota.jsp" style="text-decoration:none">Rotas</a>
+                <a class="ico" href="http://localhost:8080/sistTerra/listarRota.jsp" style="text-decoration:none">Listar Rotas</a>
+    
+         </div>  
+<jsp:include page="rodape.jsp" />

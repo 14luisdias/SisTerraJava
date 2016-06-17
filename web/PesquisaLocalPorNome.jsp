@@ -50,6 +50,6 @@
                 <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                 <a class="ico" href="http://localhost:8080/sistTerra/local.jsp" style="text-decoration:none">Local</a>
                 <a class="ico" href="http://localhost:8080/sistTerra/listarLocal.jsp" style="text-decoration:none">Listar Todos</a>
-    
+
         </div>
 <jsp:include page="rodape.jsp" />

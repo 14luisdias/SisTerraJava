@@ -46,7 +46,7 @@
                 <%
                    }
                 %>
-                
+
             </table><br /><br /> 
                 <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                 <a class="ico" href="http://localhost:8080/sistTerra/motorista.jsp" style="text-decoration:none">Motorista</a>

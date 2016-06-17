@@ -8,22 +8,20 @@
 <%@page import="modelo.Motorista"%>
 <%@page import="controle.MotoristaImpl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="cabecalho.jsp" />
-        <div id="menu">
-            <ul class="menu-principal">
-                <a href="http://localhost:8080/sistTerra/motorista.jsp" class="url"><li>Motorista</li></a>
-                <a href="http://localhost:8080/sistTerra/fornecedor.jsp" class="url"><li>Fornecedor</li></a>
-                <a href="http://localhost:8080/sistTerra/material.jsp" class="url"><li>Material</li></a>
-                <a href="http://localhost:8080/sistTerra/tipoDeVeiculo.jsp" class="url"><li>Tipo de Veículo</li></a>
-                <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Veículo</li></a>
-                <a href="http://localhost:8080/sistTerra/local.jsp" class="url"><li>Locais</li></a>
-                <a href="http://localhost:8080/sistTerra/rota.jsp" class="url"><li>Rotas</li></a>
-                <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
-             </ul>
-        </div>
-            <div id="conteudo"> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Relação dos Motorista</title>
+    </head>
+    <body>
         <table>
-            <tr><td><h1>Motoristas</h1></td> </tr>
+            <tr><td><h1>Motoristas</h1></td>
+            <td>    
+                <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+                <b>|</b> <a href="http://localhost:8080/sistTerra/motorista.jsp" style="text-decoration:none">Motorista</a>
+            </td>
+            </tr>
         </table>
         <div>
             <table>
@@ -45,11 +43,8 @@
                     }
                 %>
                 
-            </table><br />
+            </table>
         </div>
-               
-            <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
-            <a class="ico" href="http://localhost:8080/sistTerra/motorista.jsp" style="text-decoration:none">Motorista</a>
-            <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">Listar Todos</a>  
-         </div>   
-<jsp:include page="rodape.jsp" />
+        
+    </body>
+</html>
