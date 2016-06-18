@@ -4,68 +4,66 @@
     Author     : 14luisdias
 --%>
 
-<%@page import="controle.MotoristaImpl"%>
-<%@page import="modelo.Motorista"%>
-<%@page import="modelo.TipoDeVeiculo"%>
-<%@page import="controle.TipoDeVeiculoImpl"%>
 <%@page import="modelo.Veiculo"%>
 <%@page import="java.util.List"%>
 <%@page import="controle.VeiculoImpl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="cabecalho.jsp" />
-        <div id="menu">
-            <ul class="menu-principal">
-                <a href="http://localhost:8080/sistTerra/motorista.jsp" class="url"><li>Motorista</li></a>
-                <a href="http://localhost:8080/sistTerra/fornecedor.jsp" class="url"><li>Fornecedor</li></a>
-                <a href="http://localhost:8080/sistTerra/material.jsp" class="url"><li>Material</li></a>
-                <a href="http://localhost:8080/sistTerra/tipoDeVeiculo.jsp" class="url"><li>Tipo de Veículo</li></a>
-                <a href="http://localhost:8080/sistTerra/veiculo.jsp" class="url"><li>Veículo</li></a>
-                <a href="http://localhost:8080/sistTerra/local.jsp" class="url"><li>Locais</li></a>
-                <a href="http://localhost:8080/sistTerra/rota.jsp" class="url"><li>Rotas</li></a>
-                <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
-             </ul>
-        </div>
-            <div id="conteudo">    
-        <form id="formulario" action="cadastrarVeiculo" method="post">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cadastrar Rota</title>
+    </head>
+    <body>
+        <h1>Cadastrar Rota</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+                            <b>|</b> <a href="http://localhost:8080/sistTerra/rota.jsp" style="text-decoration:none">Rota</a>
+                                     
+        <form action="cadastrarRota" method="post">
             <%
-                TipoDeVeiculoImpl tipoImpl = new TipoDeVeiculoImpl();
-                List<TipoDeVeiculo> list = tipoImpl.getListAll();
-                
-                MotoristaImpl motoristaImpl = new MotoristaImpl();
-                List <Motorista> list2 = motoristaImpl.getListAll();
-
+                LocalImpl localImpl = new LocalImpl();
+                List<Local> list = localImpl.getListAll();
             %>
-            <fieldset>
-                <legend>Cadastrar Veículo</legend>
-                    <label>Tipo de Veiculo</label>
-                        <select name="tipo"  style=width:400px>
-                        <option value="0">(selecione tipo de veiculo) </option>
-                 <%     for (TipoDeVeiculo t : list){ %>
-                             <option value="<%=t.getId()%>"><%=t.getNome()%></option>
+            <table>
+                <tr> <td height="50"></td></tr>
+                <tr>
+                    <td>
+                        Saida<br>
+                        <select name="saida"  style=width:400px>
+                        <option value="0">(selecione Saida) </option>
+                 <%     for (Local l : list){ %>
+                             <option value="<%=l.getId()%>"><%=l.getNome()%></option>
                  <%     }%>
                     </select><br>
-                   
-                    <label>Placa</label>
-                        <input type="text" name="placa" value="" size="56" required/>
-                    <label>Capacidade M³</label>
-                        <input type="text" name="capacidade" value="" size="56" required/>
+                        
                     </td>
                 </tr>
                 <tr>
                     
-                    <label>Motorista</label>
-                        <select name="motorista"  style=width:400px>
-                          <option value="0">(selecione motorista) </option>
-                 <%     for (Motorista m : list2){ %>
-                             <option value="<%=m.getId()%>"><%=m.getNome()%></option>
+                    <td>
+                        Destino<br>
+                        <select name="destino"  style=width:400px>
+                          <option value="0">(selecione Destino) </option>
+                 <%     for (Local l : list){ %>
+                             <option value="<%=l.getId()%>"><%=l.getNome()%></option>
                  <%     }%>
                     </select><br>
-                        <input type="submit" value="Salvar" /><br><br>
-            </fieldset>
+                        
+                    </td>
+                </tr>
+                <tr>
+                   
+                    <td>
+                        DMT<br>
+                        <input type="text" name="dmt" value="" size="56" required/>
+                    </td>
+                </tr>
+                <tr><td colspan="2" align="right">
+                        <input type="submit" value="Salvar" />
+                    </td>
+                </tr>
+            </table>
+            
+            
         </form>
-        <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
-        <a class="ico" href="http://localhost:8080/sistTerra/fornecedor.jsp" style="text-decoration:none">Fornecedor</a>
-        <a class="ico" href="http://localhost:8080/sistTerra/listarFornecedor.jsp" style="text-decoration:none">Listar Todos</a>
-         
-            </div>
-<jsp:include page="rodape.jsp" />
+    </body>
+</html>
