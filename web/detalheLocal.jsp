@@ -13,7 +13,7 @@
         <title>Detalhes do Fornecedor</title>
     </head>
     <body>
-         <h1>Detalhes do Local</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+         <h1>Detalhes do Local</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                             <b>|</b> <a href="http://localhost:8080/sistTerra/local.jsp" style="text-decoration:none">Local</a>
                             <b>|</b> <a href="http://localhost:8080/sistTerra/listarLocal.jsp" style="text-decoration:none">Listar Todos</a>  
         

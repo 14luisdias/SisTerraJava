@@ -21,7 +21,7 @@
                 <a href="http://localhost:8080/sistTerra/viagens.jsp" class="url"><li>Viagens</li></a>
              </ul>
         </div>
-            <div id="conteudo">  
+            <div id="conteudo">
          <table>
             <tr><td><h1>Resultado da Busca</h1></td>
             </tr>
@@ -48,9 +48,10 @@
                 %>
 
             </table><br /><br /> 
-                <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
+         </div>
+            <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                 <a class="ico" href="http://localhost:8080/sistTerra/motorista.jsp" style="text-decoration:none">Motorista</a>
                 <a class="ico" href="http://localhost:8080/sistTerra/listarMotorista.jsp" style="text-decoration:none">Listar Todos</a>
-    
+         
          </div>  
 <jsp:include page="rodape.jsp" />

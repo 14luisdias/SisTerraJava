@@ -78,7 +78,8 @@ public class CadastraVeiculo extends HttpServlet {
         
         if(!"0".equals(request.getParameter("tipo"))){
            
-        
+                  
+                  
                   Veiculo veiculo = new Veiculo();//cria o objeto 
                   veiculo.setPlaca(request.getParameter("placa"));
                   veiculo.setCapacidade(Double.valueOf(request.getParameter("capacidade")));

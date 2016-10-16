@@ -23,7 +23,7 @@ and open the template in the editor.
         <div id="corpo-todo">
             
         <div id="cabecalho">
-            <h1><a href="http://localhost:8080/sistTerra/index.html">
+            <h1><a href="http://localhost:8080/sistTerra/index.jsp">
                     <img height="120" class="img-logo" src="img/Png/logo/logo.png" />
                     <img height="25" class="img-name" src="img/Png/logo/logo-name.png" />
                 </a></h1>

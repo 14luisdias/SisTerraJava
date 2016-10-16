@@ -47,7 +47,6 @@
                    }
                 %>
                 
-<<<<<<< OURS
             </table><br /><br /> 
                 <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                 <a class="ico" href="http://localhost:8080/sistTerra/material.jsp" style="text-decoration:none">Material</a>

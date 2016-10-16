@@ -37,7 +37,7 @@
                     <input type="submit" value="Atualizar" /><br/><br/>
             </fieldset>
         </form>
-            <a class="ico" href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+            <a class="ico" href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
             <a class="ico" href="http://localhost:8080/sistTerra/fornecedor.jsp" style="text-decoration:none">Fornecedor</a>
             <a class="ico" href="http://localhost:8080/sistTerra/listarFornecedor.jsp" style="text-decoration:none">Listar Todos</a>  
             </div>

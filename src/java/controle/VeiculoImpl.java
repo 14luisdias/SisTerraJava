@@ -113,19 +113,15 @@ public class VeiculoImpl implements VeiculoDao {
 
 	@Override
 	public Veiculo findById(int id) {
-		
-                
-                String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destipo,m.nommot "
+		String sql = "SELECT v.codvei,v.plavei,v.capvei,v.codtipo,v.codmot,t.destipo,m.nommot "
                                 +   "FROM veiculo v, tipoveiculo t, motorista m" 
                                 +   " WHERE v.codtipo = t.codtipo and v.codmot = m.codmot"
-                                +   "and v.codvei = ?";
-                
+                                +   " and v.codvei = ?";
                 Veiculo veiculo = new Veiculo();
                 try{
                     stmt = conn.prepareStatement(sql);
                     stmt.setInt(1, id);
                     rs = stmt.executeQuery();
- 
                     rs.next();
                     veiculo.setId(rs.getInt(1));
                     veiculo.setPlaca(rs.getString(2));
@@ -134,12 +130,14 @@ public class VeiculoImpl implements VeiculoDao {
                     veiculo.setCodMotorista(rs.getInt(5));
                     veiculo.setNomeTipo(rs.getString(6));
                     veiculo.setNomeMotorista(rs.getString(7));
-                   
-                }catch (SQLException e) {
+                 }catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return veiculo;
 	}
+        //xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          
+        //xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     @Override
     public List<Veiculo> findByTipo(int tipo) {
         List<Veiculo> list = new ArrayList<Veiculo>();    

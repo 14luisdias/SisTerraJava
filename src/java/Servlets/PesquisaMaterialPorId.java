@@ -67,8 +67,8 @@ public class PesquisaMaterialPorId extends HttpServlet {
         MaterialImpl materialDao = new MaterialImpl();
         //pesquisei pelo material
         Material material = materialDao.findById(idMaterial);
+       
         request.setAttribute("material", material);
-        
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher("detalheMaterial.jsp");
         dispatcher.forward(request, response);

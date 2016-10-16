@@ -5,6 +5,7 @@
  */
 package Servlets;
 
+
 import controle.VeiculoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -64,18 +65,17 @@ public class PesquisaVeiculoPorId extends HttpServlet {
 //        processRequest(request, response);
        
         int idVeiculo = Integer.valueOf(request.getParameter("id"));
-        VeiculoImpl veiculoDao = new VeiculoImpl();
-        //pesquisei pelo material
-        Veiculo veiculo = veiculoDao.findById(idVeiculo);
-        request.setAttribute("veiculo", veiculo);
         
+        VeiculoImpl veiculoDao = new VeiculoImpl();
+        Veiculo veiculo = veiculoDao.findById(idVeiculo);
+        
+        request.setAttribute("veiculo", veiculo);
+            
+              
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher("detalheVeiculo.jsp");
         dispatcher.forward(request, response);
-          
-     
-           
- 
+        
     }
 
     /**

@@ -18,7 +18,7 @@
         <table>
             <tr><td><h1>Rotas</h1></td>
             <td>    
-                <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+                <b>|</b> <a href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                 <b>|</b> <a href="http://localhost:8080/sistTerra/rota.jsp" style="text-decoration:none">Rota</a>
             </td>
             </tr>

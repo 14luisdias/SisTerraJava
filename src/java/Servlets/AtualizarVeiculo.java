@@ -1,29 +1,30 @@
+package Servlets;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+
+
 
 import controle.RotaImpl;
+import controle.VeiculoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import java.sql.ResultSet;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.Rota;
+import modelo.Veiculo;
 
 /**
  *
- * @author Qualidade
+ * @author LAB03-22
  */
-@WebServlet(name = "PesquisaRotaPorNome", urlPatterns = {"/pesquisaRotaPorNome"})
-public class PesquisaRotaPorNome extends HttpServlet {
+@WebServlet(name = "AtualizarVeiculo", urlPatterns = {"/atualizarVeiculo"})
+public class AtualizarVeiculo extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,19 +37,16 @@ public class PesquisaRotaPorNome extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-            
-            
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet PesquisaMotorista</title>");            
+            out.println("<title>Servlet AtualizarMotorista</title>");            
             out.println("</head>");
             out.println("<body>");
-         // out.println("<h1>Servlet PesquisaMotorista at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet AtualizarMotorista at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -66,50 +64,8 @@ public class PesquisaRotaPorNome extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-          RotaImpl rotaDao = new RotaImpl();
-          int idSaida = Integer.valueOf(request.getParameter("saida"));
-          int idDestino = Integer.valueOf(request.getParameter("destino"));
-          
-          if ("".equals(request.getParameter("codigo")))
-          {
-            if((!"0".equals(request.getParameter("saida"))) || (!"0".equals(request.getParameter("destino"))))  
-            {
-                if((!"0".equals(request.getParameter("saida"))))
-                {
-                            List<Rota> rota = rotaDao.findBySaida(idSaida);
-                            request.setAttribute("rota", rota);
-                }
-               if(!"0".equals(request.getParameter("destino"))){
-                            List<Rota> rota = rotaDao.findByDestino(idDestino);
-                            request.setAttribute("rota", rota);
-                }
-               if((!"0".equals(request.getParameter("saida")))&& (!"0".equals(request.getParameter("destino"))))
-               {
-                            List<Rota> rota = rotaDao.findBySaidaDestino(idSaida, idDestino);
-                            request.setAttribute("rota", rota);
-               }
-               RequestDispatcher dispatcher;
-               dispatcher = request.getRequestDispatcher("PesquisaRotaPorNome.jsp");
-               dispatcher.forward(request, response);
-            }     
-            
-          }else{      
-               if ((!"".equals(request.getParameter("codigo"))))
-                   {
-                    int cod = Integer.valueOf(request.getParameter("codigo"));
-                    response.sendRedirect("pesquisaRotaporid?id="+cod);
-                                        
-                    }else{
-                           response.sendRedirect("rota.jsp");
-              
-                        }
-          }
-  }
-    
-                
-            
-    
+        processRequest(request, response);
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -122,18 +78,37 @@ public class PesquisaRotaPorNome extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
         
-         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+         int codigo = Integer.valueOf(request.getParameter("id"));
+//        int sai = Integer.valueOf(request.getParameter("saida"));
+//        int des = Integer.valueOf(request.getParameter("destino"));
+//        double dmt = Double.valueOf(request.getParameter("dmt"));
+//        
+        
+        
+            Veiculo veiculo = new Veiculo();//cria o objeto Fornecedor
             
+            veiculo.setId(Integer.valueOf(request.getParameter("id")));
+            veiculo.setCodTipo(Integer.valueOf(request.getParameter("tipoVeiculo")));
+            veiculo.setCodMotorista(Integer.valueOf(request.getParameter("motorista")));
+            veiculo.setPlaca(request.getParameter("placa"));
+            veiculo.setCapacidade(Double.valueOf(request.getParameter("capacidade")));
+          
+                   
+            VeiculoImpl veiculoDao = new VeiculoImpl();//cria o objeto 
            
-            
-            
-        }
+             //salva
+           
+            veiculoDao.atualizar(veiculo);
+           //retorna pra a tela de cadastro
+    
         
+        response.sendRedirect("pesquisaVeiculoporid?id=" + codigo);
+         
+              
     }
+    
 
     /**
      * Returns a short description of the servlet.

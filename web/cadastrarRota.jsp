@@ -15,7 +15,7 @@
         <title>Cadastrar Rota</title>
     </head>
     <body>
-        <h1>Cadastrar Rota</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+        <h1>Cadastrar Rota</h1> <b>|</b> <a href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                             <b>|</b> <a href="http://localhost:8080/sistTerra/rota.jsp" style="text-decoration:none">Rota</a>
                                      
         <form action="cadastrarRota" method="post">

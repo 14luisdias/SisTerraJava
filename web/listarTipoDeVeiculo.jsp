@@ -18,7 +18,7 @@
         <table>
             <tr><td><h1>Tipos de Veículos</h1></td>
             <td>    
-                <b>|</b> <a href="http://localhost:8080/sistTerra/index.html" style="text-decoration:none">Menu Principal</a>
+                <b>|</b> <a href="http://localhost:8080/sistTerra/index.jsp" style="text-decoration:none">Menu Principal</a>
                 <b>|</b> <a href="http://localhost:8080/sistTerra/tipoDeVeiculo.jsp" style="text-decoration:none">Tipo De Veiculo</a>
             </td>
             </tr>

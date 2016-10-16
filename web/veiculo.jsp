@@ -42,7 +42,7 @@
                              <option value="<%=t.getId()%>"><%=t.getNome()%></option>
                  <%     }%>
                     </select><br>
-                    <label>Cód. Motorista</label>
+                    <label>Motorista</label>
                      <select name="motorista"  style=width:400px>
                           <option value="0">(selecione motorista) </option>
                  <%     for (Motorista m : list2){ %>
@@ -50,7 +50,9 @@
                  <%     }%>
                     </select><br> <br>
                     <!-- Limpar Dados -->
-                    <input type="reset" value="Restaurar" /><br /><br />
+                    
+                    <input type="reset" value="Restaurar" />
+                    <input type="submit" value="Buscar"/><br /><br />
                 </fieldset>    
             </form>         
                        <!-- Novo Motorista -->      
