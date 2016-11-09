@@ -3,7 +3,6 @@
     Created on : 14/05/2016, 18:03:42
     Author     : LAB03-22
 --%>
-
 <%@page import="modelo.Local"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,7 +26,6 @@
                 <tr>
                      <td>Código: </td>
                      <td><input type="text" name="cod" value="<%= l.getId()%>" disabled="disabled"/></td>
-                        
                 </tr>
                 <tr>
                     <td size="40%">Descrição</td>
